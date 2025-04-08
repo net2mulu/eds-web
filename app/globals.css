@@ -82,13 +82,20 @@
   .border-gold-400 {
     border-color: #d1b06c;
   }
+
+  /* Add this to your existing globals.css */
+  .shadow-glow {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
 }
 
 /* Avatar collage animations */
 .avatar-item {
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity, box-shadow;
+  animation: float 6s ease-in-out infinite;
 }
 
 .avatar-item.animate-in {
@@ -97,16 +104,29 @@
 }
 
 /* Grid item hover effect */
-.avatar-item {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
 .avatar-item:hover {
   transform: scale(1.08);
   z-index: 50;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Coming soon page animations */
+/* Full-height image style for the 3-image layout */
+.full-height-image {
+  height: 100%;
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.full-height-image:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Entrance animation for collage items */
+.entrance-animation {
+  animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -118,6 +138,7 @@
   }
 }
 
+/* Coming soon page animations */
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -130,11 +151,11 @@
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s ease forwards;
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-fade-in-down {
-  animation: fadeInDown 0.8s ease forwards;
+  animation: fadeInDown 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animation-delay-300 {
@@ -143,4 +164,121 @@
 
 .animation-delay-600 {
   animation-delay: 600ms;
+}
+
+/* Hover border effect */
+.avatar-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 0px solid rgba(209, 176, 108, 0);
+  border-radius: inherit;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.avatar-item:hover::after {
+  border-width: 3px;
+  border-color: rgba(209, 176, 108, 0.5);
+}
+
+/* Slide transitions */
+.translate-x-full,
+.translate-x-0,
+.-translate-x-full {
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+/* Floating animation for all slides */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Each avatar will have a different animation delay */
+.avatar-item:nth-child(2n) {
+  animation-delay: 1s;
+}
+
+.avatar-item:nth-child(3n) {
+  animation-delay: 2s;
+}
+
+.avatar-item:nth-child(5n) {
+  animation-delay: 0.5s;
+}
+
+.avatar-item:nth-child(7n) {
+  animation-delay: 1.5s;
+}
+
+/* Slow scale effect for second slide */
+.slow-scale-avatar {
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slow-scale-avatar:hover {
+  transform: scale(1.08) !important;
+}
+
+/* Creative layout animations */
+.creative-layout-avatar {
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.creative-layout-avatar:hover {
+  transform: translateY(-5px) scale(1.08) !important;
+  z-index: 50;
+}
+
+/* Dramatic effect for the 4th slide with just 2 images */
+.dramatic-avatar {
+  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dramatic-avatar:hover {
+  transform: scale(1.08) rotate(1deg) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  z-index: 50;
+}
+
+/* Fix for floating animation and hover states */
+.avatar-item.animate-in {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Ensure hover states override floating animation */
+.avatar-item:hover {
+  animation-play-state: paused;
+}
+
+/* Floating animation for testimonial cards */
+.floating-card {
+  animation: floatCard 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes floatCard {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Ensure hover states override floating animation */
+.floating-card:hover {
+  animation-play-state: paused;
 }
