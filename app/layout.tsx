@@ -1,23 +1,29 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import Navigation from "@/components/navigation"
-import Footer from "@/components/footer"
-import Image from "next/image"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
+
+// Hard-coded flag to control whether to show the coming soon page
+// This should match the value in page.tsx
+const SHOW_COMING_SOON = true;
 
 export const metadata: Metadata = {
-  title: "Ethiopian Diaspora Service",
-  description: "Connecting Ethiopia's global community to foster unity, cultural pride, and national progress.",
-    generator: 'v0.dev'
-}
+  title: SHOW_COMING_SOON
+    ? "Ethiopian Diaspora Service - Coming Soon"
+    : "Ethiopian Diaspora Service",
+  description:
+    "Connecting Ethiopia's global community to foster unity, cultural pride, and national progress.",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -35,14 +41,11 @@ export default function RootLayout({
           </div>
         </div>
 
-        <Navigation />
+        {/* Only show navigation and footer for the normal site */}
+        {!SHOW_COMING_SOON && <Navigation />}
         <main>{children}</main>
-        <Footer />
+        {!SHOW_COMING_SOON && <Footer />}
       </body>
     </html>
-  )
+  );
 }
-
-
-
-import './globals.css'
