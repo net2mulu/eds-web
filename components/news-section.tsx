@@ -23,11 +23,11 @@ const newsItems: NewsItem[] = [
   {
     id: 2,
     title:
-      "The Ethiopian Diaspora Trust Fund (EDTF) Reaches Milestone with $10 Million in Support of Ethiopia's Growth",
-    date: "Oct 23, 2024",
-    image: "/Home/sectionNine/edtf.webp?height=120&width=200",
+      "GreenTech Ethiopia Secures $15 Million Investment to Expand Renewable Energy Projects",
+    date: "Nov 18, 2024",
+    image: "/green.jpg",
     excerpt:
-      "EDTF announces new funding round for community development projects across Ethiopia.",
+      "GreenTech Ethiopia receives major funding to scale up solar and wind energy initiatives across rural regions.",
     url: "#",
   },
   {
