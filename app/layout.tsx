@@ -9,7 +9,7 @@ import Image from "next/image";
 const inter = Inter({ subsets: ["latin"] });
 
 // This should match the value in page.tsx
-const SHOW_COMING_SOON = true;
+const SHOW_COMING_SOON = false;
 
 export const metadata: Metadata = {
   title: SHOW_COMING_SOON
