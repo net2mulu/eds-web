@@ -26,7 +26,7 @@ const events: Event[] = [
     date: "Jan 14, 2025",
     time: "7:00 PM EST",
     location: "Online via Zoom",
-    image: "/placeholder.svg?height=250&width=400",
+    image: "/Home/sectionEight/CulturalExchange.webp?height=250&width=400",
     category: "webinar",
   },
   {
@@ -38,7 +38,7 @@ const events: Event[] = [
     date: "Jan 22, 2025",
     time: "10:00 AM - 4:00 PM",
     location: "Addis Ababa Exhibition Center",
-    image: "/placeholder.svg?height=250&width=400",
+    image: "/Home/sectionEight/Ethiopian.webp?height=250&width=400",
     category: "conference",
   },
   {
@@ -49,7 +49,7 @@ const events: Event[] = [
     date: "Jan 4, 2025",
     time: "2:00 PM EST",
     location: "Online via Zoom",
-    image: "/placeholder.svg?height=250&width=400",
+    image: "/Home/sectionEight/lalibela.webp?height=250&width=400",
     category: "festival",
   },
 ];

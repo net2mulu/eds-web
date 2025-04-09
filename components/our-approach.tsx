@@ -42,7 +42,7 @@ export default function OurApproach() {
       description:
         "Creating connections through cultural programs and transparent communication.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-4icimLzuimbt6qsikNvjLGB8TeYFlF.png#x=155,y=273,w=465,h=243",
+        "/Home/sectionThree/culture.webp",
       imageAlt: "Ethiopian women in traditional dress at a cultural event",
     },
     {
@@ -50,7 +50,7 @@ export default function OurApproach() {
       description:
         "Equipping Ethiopians abroad to actively shape Ethiopia's future.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-4icimLzuimbt6qsikNvjLGB8TeYFlF.png#x=610,y=273,w=465,h=243",
+        "/Home/sectionThree/city.webp",
       imageAlt: "Night cityscape of Addis Ababa showing urban development",
     },
     {
@@ -58,7 +58,7 @@ export default function OurApproach() {
       description:
         "Fostering unity among generations and addressing global realities.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-4icimLzuimbt6qsikNvjLGB8TeYFlF.png#x=155,y=552,w=465,h=243",
+        "/Home/sectionThree/children.webp",
       imageAlt: "Smiling Ethiopian children representing future generations",
     },
     {
@@ -66,7 +66,7 @@ export default function OurApproach() {
       description:
         "Working with local and international partners for sustained progress.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-4icimLzuimbt6qsikNvjLGB8TeYFlF.png#x=610,y=552,w=465,h=243",
+        "/Home/sectionThree/hands.webp",
       imageAlt:
         "Hands joined together representing collaboration and partnership",
     },

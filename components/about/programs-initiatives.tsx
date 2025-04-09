@@ -40,7 +40,7 @@ export default function ProgramsInitiatives() {
       description:
         "Organizing forums to connect diaspora investors with local businesses and government officials, facilitating investment opportunities in Ethiopia.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-s4latCUKC6nMjBs8putwEOHr43Ue6R.png#x=211,y=423,w=348,h=223",
+        "/Home/sectionNine/fitsumarega.webp",
       imageAlt: "Investment forum speaker presenting to audience",
     },
     {
@@ -48,7 +48,7 @@ export default function ProgramsInitiatives() {
       description:
         "Hosting cultural events and festivals that celebrate Ethiopian heritage, fostering pride and unity among diaspora members.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-s4latCUKC6nMjBs8putwEOHr43Ue6R.png#x=552,y=423,w=348,h=223",
+        "/Home/sectionNine/edtf.webp",
       imageAlt: "Ethiopian Diaspora Trust Fund promotional collage",
     },
     {
@@ -56,7 +56,7 @@ export default function ProgramsInitiatives() {
       description:
         "Conducting outreach programs to educate the diaspora about their rights in their country and responsibilities, as well as available resources for support.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-s4latCUKC6nMjBs8putwEOHr43Ue6R.png#x=893,y=423,w=348,h=223",
+        "/Home/sectionNine/celebration.webp",
       imageAlt: "Community outreach gathering with Ethiopian decorations",
     },
     {
@@ -64,7 +64,7 @@ export default function ProgramsInitiatives() {
       description:
         "Creating platforms for networking and collaboration among diaspora communities, encouraging collective action and engagement.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-s4latCUKC6nMjBs8putwEOHr43Ue6R.png#x=1234,y=423,w=348,h=223",
+        "/Home/sectionNine/NBE.webp",
       imageAlt: "Networking event with audience listening to speaker",
     },
   ];

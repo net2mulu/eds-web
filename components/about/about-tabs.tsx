@@ -27,7 +27,7 @@ export default function AboutTabs() {
       id: "history",
       title: "History",
       image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-VzApHOKustb8EWB6oNe1V9A419Qo1P.png",
+        "/About/sectionThree/history.webp?height=500&width=600",
       content: (
         <>
           <h2 className="text-4xl md:text-5xl font-bold mb-8">Our History</h2>
@@ -57,7 +57,7 @@ export default function AboutTabs() {
     {
       id: "mission",
       title: "Mission",
-      image: "/placeholder.svg?height=500&width=600",
+      image: "/About/sectionThree/mission.webp?height=500&width=600",
       content: (
         <>
           <h2 className="text-4xl md:text-5xl font-bold mb-8">Our Mission</h2>
@@ -84,7 +84,7 @@ export default function AboutTabs() {
     {
       id: "vision",
       title: "Vision",
-      image: "/placeholder.svg?height=500&width=600",
+      image: "/About/sectionThree/value.webp?height=500&width=600",
       content: (
         <>
           <h2 className="text-4xl md:text-5xl font-bold mb-8">Our Vision</h2>
@@ -112,7 +112,7 @@ export default function AboutTabs() {
     {
       id: "values",
       title: "Values",
-      image: "/placeholder.svg?height=500&width=600",
+      image: "/About/sectionThree/vision.webp?height=500&width=600",
       content: (
         <>
           <h2 className="text-4xl md:text-5xl font-bold mb-8">Our Values</h2>

@@ -21,7 +21,7 @@ export default function ParticipationTabs() {
       title: "Cultural Exchange Programs",
       description: "Deepen your connection to Ethiopian heritage.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BHQEdEQclEAFovLB0Td09YRvJNfB84.png",
+        "/Home/sectionFour/coffee.webp",
       imageAlt: "Traditional Ethiopian coffee ceremony with decorated cups",
     },
     {
@@ -29,7 +29,7 @@ export default function ParticipationTabs() {
       title: "Tourism & Investment Projects",
       description:
         "Explore opportunities to contribute to Ethiopia's development.",
-      imageUrl: "/placeholder.svg?height=600&width=600",
+      imageUrl: "/Home/sectionFour/ethiopia.webp",
       imageAlt: "Tourism and investment opportunities in Ethiopia",
     },
     {
@@ -37,7 +37,7 @@ export default function ParticipationTabs() {
       title: "Knowledge Transfer",
       description:
         "Share expertise to modernize institutions and systems back home.",
-      imageUrl: "/placeholder.svg?height=600&width=600",
+      imageUrl: "/Home/sectionFour/ethiotelecom.webp",
       imageAlt: "Knowledge transfer and expertise sharing",
     },
   ];

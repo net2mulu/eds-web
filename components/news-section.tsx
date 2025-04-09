@@ -15,7 +15,7 @@ const newsItems: NewsItem[] = [
     id: 1,
     title: "Ethiopian Diaspora Service Launches New Website",
     date: "Nov 14, 2024",
-    image: "/placeholder.svg?height=120&width=200",
+    image: "/Home/sectionNine/fitsumarega.webp?height=120&width=200",
     excerpt:
       "The platform brings together resources and tools to help the Ethiopian diaspora connect with their homeland.",
     url: "#",
@@ -25,7 +25,7 @@ const newsItems: NewsItem[] = [
     title:
       "The Ethiopian Diaspora Trust Fund (EDTF) Reaches Milestone with $10 Million in Support of Ethiopia's Growth",
     date: "Oct 23, 2024",
-    image: "/placeholder.svg?height=120&width=200",
+    image: "/Home/sectionNine/edtf.webp?height=120&width=200",
     excerpt:
       "EDTF announces new funding round for community development projects across Ethiopia.",
     url: "#",
@@ -34,7 +34,7 @@ const newsItems: NewsItem[] = [
     id: 3,
     title: "Members of Ethiopian Diaspora Community Now Serve on Boards",
     date: "Sep 8, 2024",
-    image: "/placeholder.svg?height=120&width=200",
+    image: "/Home/sectionNine/celebration.webp?height=120&width=200",
     excerpt:
       "In a momentous development, Ethiopian professionals from the diaspora have been appointed to key positions.",
     url: "#",
@@ -44,7 +44,7 @@ const newsItems: NewsItem[] = [
     title:
       "EDS Literary Digital Archive Preserves Ethiopian Heritage for Future Generations",
     date: "Aug 5, 2024",
-    image: "/placeholder.svg?height=120&width=200",
+    image: "/Home/sectionNine/NBE.webp?height=120&width=200",
     excerpt:
       "A new online platform preserves and showcases Ethiopian literary works and cultural artifacts.",
     url: "#",

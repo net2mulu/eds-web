@@ -40,7 +40,7 @@ export default function AboutMission() {
           <div className="relative mt-8 lg:mt-0">
             <div className="rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-AFSh6Oq6F8Jfn1zkDHuKRwzVj9JKzR.png"
+                src="/About/sectionOne/fitsum3.webp"
                 alt="Ethiopian Diaspora Service official speaking at an event"
                 width={600}
                 height={400}

@@ -13,7 +13,7 @@ import NewsSection from "@/components/news-section";
 
 // Hard-coded flag to control whether to show the coming soon page
 // Set to true to show coming soon page, false to show the normal site
-const SHOW_COMING_SOON = true;
+const SHOW_COMING_SOON = false;
 
 export default function Home() {
   // If SHOW_COMING_SOON is true, render the coming soon page

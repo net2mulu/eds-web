@@ -26,59 +26,93 @@ interface HeroSlide {
 }
 
 const heroSlides: HeroSlide[] = [
+
+
+
   {
     id: 1,
+    title: "Your Impact, Your Innovation, Your Ethiopia",
+    subtitle:
+      "Empowering visionary global changemakers to invest, innovate, and create sustainable progress for Ethiopia.",
+    avatarItems: [
+      {
+        src: "/Home/sectionOne/slideTwo/abiy.webp",
+        alt: "Ethiopian portrait",
+        gridClasses: "col-start-1 col-span-2 row-start-1 row-span-5",
+        className: "slow-scale-avatar",
+      },
+      {
+        src: "/Home/sectionOne/slideTwo/fitsum.webp",
+        alt: "Ethiopian portrait",
+        gridClasses: "col-start-3 col-span-3 row-start-2 row-span-6",
+        className: "slow-scale-avatar",
+      },
+      {
+        src: "/Home/sectionOne/slideTwo/bnalf.webp",
+        alt: "Ethiopian portrait",
+        gridClasses: "col-start-6 col-span-3 row-start-1 row-span-5",
+        className: "slow-scale-avatar",
+      },
+    ],
+  },
+
+
+
+
+
+  {
+    id: 2,
     title: "Your Roots, Your Heritage, Your Ethiopia",
     subtitle:
       "Empowering the Ethiopian Diaspora to build bridges of progress, unity, and shared responsibility.",
     collageClassName: "floating-collage",
     avatarItems: [
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%284%29-Tg5FfIbTh9sXoo5naozQNlc5CaspBQ.png",
+        src: "/Home/sectionOne/slideOne/image1.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-1 col-span-1 row-start-2 row-span-1",
         className: "floating-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%2033-SBsADMQDogERQ6cntIMvCMdxuzKprb.png",
+        src: "/Home/sectionOne/slideOne/image2.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-2 col-span-3 row-start-1 row-span-3",
         className: "floating-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%201171275126-N8dCMJ8dXiwWXj1Iz63s4fEsqajpm1.png",
+        src: "/Home/sectionOne/slideOne/image3.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-5 col-span-1 row-start-1 row-span-1",
         className: "floating-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%289%29-TZyYtyZKEeglcYdN529lZjgZMGcAOV.png",
+        src: "/Home/sectionOne/slideOne/image4.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-6 col-span-1 row-start-1 row-span-1",
         clipped: true,
         className: "floating-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%289%29-TZyYtyZKEeglcYdN529lZjgZMGcAOV.png",
+        src: "/Home/sectionOne/slideOne/image6.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-7 col-span-1 row-start-2 row-span-1",
         clipped: true,
         className: "floating-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%201171275126-N8dCMJ8dXiwWXj1Iz63s4fEsqajpm1.png",
+        src: "/Home/sectionOne/slideOne/image7.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-7 col-span-1 row-start-3 row-span-1",
         className: "floating-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%282%29-31wKhN4ro95Tzy6TSliPynpDw2FmtL.png",
+        src: "/Home/sectionOne/slideOne/image5.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-5 col-span-2 row-start-2 row-span-2",
         className: "floating-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%287%29-RKmN2zopdDRUn9tuvRaySpn6PbDEPk.png",
+        src: "/Home/sectionOne/slideOne/image10.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-8 col-span-1 row-start-3 row-span-1",
         roundedFull: true,
@@ -86,56 +120,24 @@ const heroSlides: HeroSlide[] = [
         className: "floating-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%283%29-MT6oR9I187RvYXJ2BllKnhODYCTCHe.png",
+        src: "/Home/sectionOne/slideOne/image11.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-3 col-span-2 row-start-4 row-span-2",
         className: "floating-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%201171275129-73kgvc24z1ifAE1JBc67cw8ClK1Fwa.png",
+        src: "/Home/sectionOne/slideOne/image12.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-5 col-span-1 row-start-4 row-span-1",
         className: "floating-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%286%29-mk1d7AQP0kB8lJ2cl20uIdczF4GRBx.png",
+        src: "/Home/sectionOne/slideOne/image9.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-2 col-span-1 row-start-4 row-span-1",
         className: "floating-avatar",
       },
-      {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%288%29-xMQGBZWsNu7rCEnp00qImjFysZaQeA.png",
-        alt: "Ethiopian portrait",
-        gridClasses: "col-start-1 col-span-1 row-start-4 row-span-1",
-        clipped: true,
-        className: "floating-avatar",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Your Impact, Your Innovation, Your Ethiopia",
-    subtitle:
-      "Empowering visionary global changemakers to invest, innovate, and create sustainable progress for Ethiopia.",
-    avatarItems: [
-      {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%2033-SBsADMQDogERQ6cntIMvCMdxuzKprb.png",
-        alt: "Ethiopian portrait",
-        gridClasses: "col-start-1 col-span-2 row-start-1 row-span-5",
-        className: "slow-scale-avatar",
-      },
-      {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%282%29-31wKhN4ro95Tzy6TSliPynpDw2FmtL.png",
-        alt: "Ethiopian portrait",
-        gridClasses: "col-start-3 col-span-3 row-start-2 row-span-6",
-        className: "slow-scale-avatar",
-      },
-      {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%283%29-MT6oR9I187RvYXJ2BllKnhODYCTCHe.png",
-        alt: "Ethiopian portrait",
-        gridClasses: "col-start-6 col-span-3 row-start-1 row-span-5",
-        className: "slow-scale-avatar",
-      },
+     
     ],
   },
   {
@@ -145,31 +147,31 @@ const heroSlides: HeroSlide[] = [
       "Empowering the Ethiopian Diaspora to stay informed, engaged, and connected with the latest news, events, and essential resources for collective progress.",
     avatarItems: [
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%284%29-Tg5FfIbTh9sXoo5naozQNlc5CaspBQ.png",
+        src: "/Home/sectionOne/slideThree/bilene.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-1 col-span-2 row-start-1 row-span-3",
         className: "creative-layout-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%2033-SBsADMQDogERQ6cntIMvCMdxuzKprb.png",
+        src: "/Home/sectionOne/slideTwo/abiy.webp ",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-3 col-span-4 row-start-1 row-span-4",
         className: "creative-layout-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%201171275126-N8dCMJ8dXiwWXj1Iz63s4fEsqajpm1.png",
+        src: "/Home/sectionOne/slideThree/fitsumTwo.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-7 col-span-2 row-start-1 row-span-2",
         className: "creative-layout-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%282%29-31wKhN4ro95Tzy6TSliPynpDw2FmtL.png",
+        src: "/Home/sectionOne/slideThree/gedion.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-1 col-span-3 row-start-5 row-span-3",
         className: "creative-layout-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%287%29-RKmN2zopdDRUn9tuvRaySpn6PbDEPk.png",
+        src: "/Home/sectionOne/slideThree/gedion2.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-6 col-span-5 row-start-5 row-span-2",
         roundedFull: false,
@@ -184,13 +186,13 @@ const heroSlides: HeroSlide[] = [
       "Empowering Ethiopians abroad with tailored support, dedicated services, and expert guidance to overcome challenges, build stronger communities, and celebrate our shared heritage.",
     avatarItems: [
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%2033-SBsADMQDogERQ6cntIMvCMdxuzKprb.png",
+        src: "/Home/sectionOne/slideFour/supportwomen.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-1 col-span-4 row-start-1 row-span-6",
         className: "dramatic-avatar",
       },
       {
-        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%282%29-31wKhN4ro95Tzy6TSliPynpDw2FmtL.png",
+        src: "/Home/sectionOne/slideFour/supportman.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-5 col-span-4 row-start-1 row-span-6",
         className: "dramatic-avatar",

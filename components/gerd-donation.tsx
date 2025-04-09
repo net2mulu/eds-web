@@ -37,7 +37,7 @@ const GERDDonation = () => {
         {/* Left side - Image */}
         <div className="relative h-[400px] lg:h-auto">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-aA6T6AviDRAYdk0xtcTAd6XGOyk29b.png"
+            src="/Home/sectionSeven/dam.webp"
             alt="Grand Ethiopian Renaissance Dam"
             fill
             className="object-cover"

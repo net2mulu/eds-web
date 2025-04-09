@@ -62,7 +62,7 @@ const Testimonials = () => {
                 <div className="flex items-center">
                   <div className="h-12 w-12 rounded-full overflow-hidden mr-4 border-2 border-white/80 shadow-glow">
                     <Image
-                      src="/placeholder.svg?height=48&width=48"
+                      src="/Home/sectionSix/avatar.webp"
                       alt="Amanuel G."
                       width={48}
                       height={48}
@@ -102,7 +102,7 @@ const Testimonials = () => {
                 <div className="flex items-center">
                   <div className="h-12 w-12 rounded-full overflow-hidden mr-4 border-2 border-white/80 shadow-glow">
                     <Image
-                      src="/placeholder.svg?height=48&width=48"
+                      src="/Home/sectionSix/avatar.webp"
                       alt="Mekdes W"
                       width={48}
                       height={48}
@@ -146,7 +146,7 @@ const Testimonials = () => {
                 <div className="flex items-center">
                   <div className="h-12 w-12 rounded-full overflow-hidden mr-4 border-2 border-white/80 shadow-glow">
                     <Image
-                      src="/placeholder.svg?height=48&width=48"
+                      src="/Home/sectionSix/avatar.webp"
                       alt="Dawit T"
                       width={48}
                       height={48}
@@ -185,7 +185,7 @@ const Testimonials = () => {
                 <div className="flex items-center">
                   <div className="h-12 w-12 rounded-full overflow-hidden mr-4 border-2 border-white/80 shadow-glow">
                     <Image
-                      src="/placeholder.svg?height=48&width=48"
+                      src="/Home/sectionSix/avatar.webp"
                       alt="Sara H."
                       width={48}
                       height={48}
@@ -227,7 +227,7 @@ const Testimonials = () => {
                 <div className="flex items-center">
                   <div className="h-12 w-12 rounded-full overflow-hidden mr-4 border-2 border-white/80 shadow-glow">
                     <Image
-                      src="/placeholder.svg?height=48&width=48"
+                      src="/Home/sectionSix/avatar.webp"
                       alt="Selam B"
                       width={48}
                       height={48}
@@ -268,7 +268,7 @@ const Testimonials = () => {
                 <div className="flex items-center">
                   <div className="h-12 w-12 rounded-full overflow-hidden mr-4 border-2 border-white/80 shadow-glow">
                     <Image
-                      src="/placeholder.svg?height=48&width=48"
+                      src="/Home/sectionSix/avatar.webp"
                       alt="Lemlem G."
                       width={48}
                       height={48}

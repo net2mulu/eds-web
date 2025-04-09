@@ -28,7 +28,7 @@ export default function MeetTeam() {
     name: "Amb. Fitsum Arega",
     title: "Director General",
     imageUrl:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-s4latCUKC6nMjBs8putwEOHr43Ue6R.png#x=211,y=335,w=348,h=348",
+      "/About/sectionSix/fitsumarega4.webp",
     bio: "As the Director of Ethiopian Diaspora Service, Amb. Fitsum Arega leads the organization's mission to connect and empower Ethiopians living abroad. With a deep passion for fostering unity and driving national progress, Amb. Arega has been instrumental in creating impactful programs that bridge the gap between the diaspora and Ethiopia.",
     experience:
       "With over 15 years of experience in public service, international relations, and diaspora engagement, Amb. Arega has worked closely with ambassadors, diplomats, and community leaders to promote investment, cultural exchange, and development opportunities.",
@@ -44,7 +44,7 @@ export default function MeetTeam() {
       id: "deputy-director",
       name: "Abebe Kebede",
       title: "Deputy Director of Diaspora Engagement",
-      imageUrl: "/placeholder.svg?height=300&width=300",
+      imageUrl: "/Home/sectionSix/avatar.webp?height=300&width=300",
       bio: "Abebe Kebede oversees diaspora engagement strategies and initiatives, focusing on building strong relationships with Ethiopian communities worldwide.",
       experience:
         "With 12 years of experience in community development and international relations, Abebe has developed innovative approaches to diaspora engagement.",
@@ -54,7 +54,7 @@ export default function MeetTeam() {
       id: "ambassador",
       name: "Tigist Mengesha",
       title: "Ambassador for Diaspora Affairs",
-      imageUrl: "/placeholder.svg?height=300&width=300",
+      imageUrl: "/Home/sectionSix/avatar.webp?height=300&width=300",
       bio: "Tigist Mengesha represents the Ethiopian Diaspora Service in international forums and coordinates with Ethiopian embassies and consulates worldwide.",
       experience:
         "A career diplomat with over 20 years of service, Tigist has served in multiple countries and specializes in diaspora relations.",
@@ -65,7 +65,7 @@ export default function MeetTeam() {
       id: "cultural-affairs",
       name: "Yonas Tadesse",
       title: "Cultural Affairs Specialist",
-      imageUrl: "/placeholder.svg?height=300&width=300",
+      imageUrl: "/Home/sectionSix/avatar.webp?height=300&width=300",
       bio: "Yonas Tadesse develops and implements cultural programs that celebrate Ethiopian heritage and strengthen cultural ties among diaspora communities.",
       experience:
         "With a background in cultural anthropology and arts management, Yonas has organized numerous cultural festivals and exchange programs.",
@@ -75,7 +75,7 @@ export default function MeetTeam() {
       id: "investment-advisor",
       name: "Sara Mohammed",
       title: "Investment and Trade Advisor",
-      imageUrl: "/placeholder.svg?height=300&width=300",
+      imageUrl: "/Home/sectionSix/avatar.webp?height=300&width=300",
       bio: "Sara Mohammed facilitates investment opportunities between diaspora investors and Ethiopian businesses, focusing on sustainable economic development.",
       experience:
         "A former investment banker with expertise in emerging markets, Sara has helped channel millions in diaspora investment to Ethiopia.",
@@ -86,7 +86,7 @@ export default function MeetTeam() {
       id: "diplomatic-liaison",
       name: "Dawit Haile",
       title: "Diplomatic Liaison Officer",
-      imageUrl: "/placeholder.svg?height=300&width=300",
+      imageUrl: "/Home/sectionSix/avatar.webp?height=300&width=300",
       bio: "Dawit Haile coordinates with diplomatic missions and international organizations to enhance support for Ethiopian diaspora communities.",
       experience:
         "With a background in international law and diplomacy, Dawit has strengthened partnerships with key international stakeholders.",
@@ -96,7 +96,7 @@ export default function MeetTeam() {
       id: "outreach-coordinator",
       name: "Hiwot Girma",
       title: "Outreach and Community Engagement Coordinator",
-      imageUrl: "/placeholder.svg?height=300&width=300",
+      imageUrl: "/Home/sectionSix/avatar.webp?height=300&width=300",
       bio: "Hiwot Girma develops and implements outreach strategies to connect with Ethiopian diaspora communities and promote their active participation.",
       experience:
         "A community organizer with extensive experience in diaspora engagement, Hiwot has established networks across North America and Europe.",
@@ -106,7 +106,7 @@ export default function MeetTeam() {
       id: "program-manager",
       name: "Bereket Tadesse",
       title: "Program Manager for Diaspora Initiatives",
-      imageUrl: "/placeholder.svg?height=300&width=300",
+      imageUrl: "/Home/sectionSix/avatar.webp?height=300&width=300",
       bio: "Bereket Tadesse oversees the planning, implementation, and evaluation of diaspora-focused programs and initiatives.",
       experience:
         "With a background in project management and international development, Bereket has successfully managed multiple high-impact programs.",
@@ -116,7 +116,7 @@ export default function MeetTeam() {
       id: "pr-officer",
       name: "Meron Alemayehu",
       title: "Communications and Public Relations Officer",
-      imageUrl: "/placeholder.svg?height=300&width=300",
+      imageUrl: "/Home/sectionSix/avatar.webp?height=300&width=300",
       bio: "Meron Alemayehu manages the organization's communications strategy, media relations, and public outreach efforts.",
       experience:
         "A seasoned communications professional, Meron has developed effective messaging strategies for diverse international audiences.",

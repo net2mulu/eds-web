@@ -46,7 +46,7 @@ export default function JoinBanner() {
       <div className="relative h-[500px] w-full overflow-hidden">
         {/* Background Image */}
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-bv6kPk89Hwco7O724oM7s7pcBjtEF8.png"
+          src="/About/sectionEight/bg.webp"
           alt="Ethiopian community gathering with flags"
           fill
           className="object-cover"

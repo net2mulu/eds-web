@@ -24,7 +24,7 @@ export default function WhoWeAre() {
           <div className="w-full md:w-1/2">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-3AM2QkxVY5le8Utijhso1OVD19xQ76.png"
+                src="/Home/sectionTwo/whoweare.webp"
                 alt="Ethiopians celebrating with flags"
                 width={600}
                 height={400}

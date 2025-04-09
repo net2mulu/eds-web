@@ -29,7 +29,7 @@ export default function CommunityHighlights() {
         "Promoting leadership and engagement among future changemakers.",
       date: "April 2024",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-2XEYKtLCbBccQO3KeFHZ5G3L6mCpYp.png#x=178,y=347,w=471,h=235",
+        "/Home/sectionFive/mothers.webp",
       imageAlt: "Women sorting coffee beans",
       link: "/insights/youth-women",
     },
@@ -40,7 +40,7 @@ export default function CommunityHighlights() {
         "Strengthening partnerships between global Ethiopian communities and the homeland.",
       date: "April 2024",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-2XEYKtLCbBccQO3KeFHZ5G3L6mCpYp.png#x=659,y=347,w=471,h=235",
+        "/Home/sectionFive/population.webp",
       imageAlt: "Ethiopian Diaspora Association logo",
       link: "/insights/diaspora-associations",
     },
@@ -50,7 +50,7 @@ export default function CommunityHighlights() {
       description: "Supporting civic initiatives that foster national pride.",
       date: "April 2024",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-2XEYKtLCbBccQO3KeFHZ5G3L6mCpYp.png#x=1140,y=347,w=471,h=235",
+        "/Home/sectionFive/abay.webp",
       imageAlt: "Dam project in Ethiopia",
       link: "/insights/social-impact",
     },
