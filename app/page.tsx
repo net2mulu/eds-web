@@ -27,13 +27,13 @@ export default function Home() {
     <div className="min-h-screen">
       <Hero />
       <WhoWeAre />
+      <GERDDonation />
       <OurApproach />
       <DiasporaImpact />
       <ParticipationTabs />
       <CommunityHighlights />
       <JoinMovement />
       <Testimonials />
-      <GERDDonation />
       <UpcomingEvents />
       <NewsSection />
     </div>
