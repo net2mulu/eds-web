@@ -121,19 +121,19 @@ const heroSlides: HeroSlide[] = [
       {
         src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%2033-SBsADMQDogERQ6cntIMvCMdxuzKprb.png",
         alt: "Ethiopian portrait",
-        gridClasses: "col-start-1 col-span-2 row-start-1 row-span-6",
+        gridClasses: "col-start-1 col-span-2 row-start-1 row-span-5",
         className: "slow-scale-avatar",
       },
       {
         src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%282%29-31wKhN4ro95Tzy6TSliPynpDw2FmtL.png",
         alt: "Ethiopian portrait",
-        gridClasses: "col-start-3 col-span-3 row-start-1 row-span-6",
+        gridClasses: "col-start-3 col-span-3 row-start-2 row-span-6",
         className: "slow-scale-avatar",
       },
       {
         src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20%283%29-MT6oR9I187RvYXJ2BllKnhODYCTCHe.png",
         alt: "Ethiopian portrait",
-        gridClasses: "col-start-6 col-span-3 row-start-1 row-span-6",
+        gridClasses: "col-start-6 col-span-3 row-start-1 row-span-5",
         className: "slow-scale-avatar",
       },
     ],
@@ -242,7 +242,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen bg-white overflow-hidden">
+    <section className="relative min-h-screen bg-white mt-24 overflow-hidden">
       {/* Decorative Accent */}
       <div className="absolute top-0 left-0 w-32 h-32 bg-navy-900 opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-[10%] right-[-10%] w-[50%] h-[50%] pointer-events-none z-0">

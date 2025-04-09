@@ -27,19 +27,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} relative`}>
-        {/* Global watermark - larger and positioned off the corner */}
-        <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[2000px] h-[2000px] opacity-[0.5]">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Vector-ROiMJW5PhQdeolCdLSoCDHsrzHblYL.png"
-              alt="Background watermark"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
-
         {/* Only show navigation and footer for the normal site */}
         {!SHOW_COMING_SOON && <Navigation />}
         <main>{children}</main>
