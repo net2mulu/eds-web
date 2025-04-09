@@ -102,13 +102,13 @@ export default function Navigation() {
                       >
                         News and Events
                       </Link>
-                      <Link
+                      {/* <Link
                         href="/resources"
                         className="text-navy-900 hover:text-gold-400 transition-colors py-3 border-b border-gray-100"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Resources
-                      </Link>
+                      </Link> */}
                       <Link
                         href="/contact"
                         className="bg-gold-400 text-navy-900 hover:bg-gold-500 transition-colors py-3 px-4 rounded text-center mt-2"
@@ -158,7 +158,7 @@ export default function Navigation() {
                 >
                   News and Events
                 </Link>
-                <Link
+                {/* <Link
                   href="/resources"
                   className={cn(
                     "hover:text-gold-400 transition-colors",
@@ -166,7 +166,7 @@ export default function Navigation() {
                   )}
                 >
                   Resources
-                </Link>
+                </Link> */}
                 <Link
                   href="/contact"
                   className="bg-gold-400 text-navy-900 hover:bg-gold-500 transition-colors py-2 px-6 rounded"
