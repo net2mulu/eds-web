@@ -96,7 +96,7 @@ export default function Navigation() {
                         Services
                       </Link>
                       <Link
-                        href="/news-events"
+                        href="/news"
                         className="text-navy-900 hover:text-gold-400 transition-colors py-3 border-b border-gray-100"
                         onClick={() => setIsMenuOpen(false)}
                       >
@@ -150,7 +150,7 @@ export default function Navigation() {
                   Services
                 </Link>
                 <Link
-                  href="/news-events"
+                  href="/news"
                   className={cn(
                     "hover:text-gold-400 transition-colors",
                     isHomePage ? "text-white" : "text-navy-900"

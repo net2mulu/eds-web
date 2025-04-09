@@ -1,10 +1,8 @@
 "use client";
 
-import type React from "react";
-
 import { useState, useRef, useEffect } from "react";
 import { Search, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import type { ServiceItem } from "@/lib/services-data";
 
 interface ServiceExplorerProps {
@@ -20,7 +18,6 @@ export default function ServiceExplorer({
   const [isPaused, setIsPaused] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const router = useRouter();
 
   // Filter services based on search query
   const filteredServices = services.filter(
@@ -73,18 +70,6 @@ export default function ServiceExplorer({
     }
   };
 
-  // Handle card click
-  const handleCardClick = (
-    index: number,
-    serviceId: string,
-    e: React.MouseEvent
-  ) => {
-    e.preventDefault();
-    setCurrentIndex(index);
-    scrollToIndex(index);
-    router.push(`/services/explore?service=${serviceId}`, { scroll: false });
-  };
-
   // Scroll functions
   const scrollLeft = () => {
     const newIndex = Math.max(0, currentIndex - 1);
@@ -99,7 +84,7 @@ export default function ServiceExplorer({
   };
 
   return (
-    <div className="w-full bg-navy-900 py-12 px-4">
+    <div className="w-full bg-navy-900 py-12 pt-36 px-4">
       <div className="container mx-auto">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8">
           Explore Our Services Effortlessly
@@ -140,10 +125,9 @@ export default function ServiceExplorer({
             onMouseLeave={() => setIsPaused(false)}
           >
             {filteredServices.map((service, index) => (
-              <a
+              <Link
                 key={service.id}
                 href={`/services/explore?service=${service.id}`}
-                onClick={(e) => handleCardClick(index, service.id, e)}
                 data-service-id={service.id}
                 className={`flex-shrink-0 w-72 bg-white rounded-lg p-6 cursor-pointer transition-all snap-center
                   ${
@@ -152,6 +136,11 @@ export default function ServiceExplorer({
                       : "hover:ring-2 hover:ring-white/30"
                   }
                   ${index === currentIndex ? "scale-105" : "scale-100"}`}
+                onClick={(e) => {
+                  // Let the link handle navigation naturally
+                  setCurrentIndex(index);
+                  scrollToIndex(index);
+                }}
               >
                 <h3 className="text-xl font-bold text-navy-900 mb-3">
                   {service.title}
@@ -161,7 +150,7 @@ export default function ServiceExplorer({
                   LEARN MORE
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
 
