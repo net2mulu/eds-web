@@ -61,7 +61,7 @@ export default function ServiceOverview() {
           >
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-k8GcOKQt7kqJxaqfOfRWFSDp7t4RJa.png"
+                src="/service/sectionOne/ofice.webp"
                 alt="Ethiopian Diaspora Agency office"
                 fill
                 className="object-cover"
