@@ -15,7 +15,7 @@ export default function ExplorePage({
 
   return (
     <main className="min-h-screen bg-gray-100">
-      <div className="w-full bg-navy-900 py-12 px-4">
+      <div className="w-full bg-navy-900 py-12 pt-36 px-4">
         <div className="container mx-auto">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8">
             Explore Our Services
