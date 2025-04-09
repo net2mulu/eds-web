@@ -51,7 +51,7 @@ export default function ServiceCards() {
       description:
         "Allows diaspora members to open foreign currency accounts in Ethiopia.",
       imageUrl:
-        "/service/sectionTwo/mony2.webp",
+        "/service/sectionTwo/MONY2.webp",
       icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=75,y=473,w=30,h=30",
     },
     {
