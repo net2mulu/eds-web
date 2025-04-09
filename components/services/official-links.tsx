@@ -23,7 +23,7 @@ export default function OfficialLinks() {
       title: "Passport Services",
       description: "Expedited E-Passport & Ethiopian Origin ID renewal Service",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd.png#x=206,y=217,w=95,h=58",
+        "/service/sectionThree/invea.webp",
       buttonText: "Visit Site",
       url: "https://www.ethiopianembassy.org/passport-services/",
     },
@@ -31,7 +31,7 @@ export default function OfficialLinks() {
       id: "visa",
       title: "VISA",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd.png#x=445,y=217,w=95,h=58",
+        "/service/sectionThree/visa.webp",
       buttonText: "Visit Site",
       url: "https://www.ethiopianembassy.org/visa-services/",
     },
@@ -40,7 +40,7 @@ export default function OfficialLinks() {
       title: "Power of Attorney",
       description: "Fast, Secure And Easy Power Of Attorney Service",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd.png#x=684,y=145,w=95,h=95",
+        "/service/sectionThree/epoa.webp",
       buttonText: "Visit Site",
       url: "https://www.ethiopianembassy.org/power-of-attorney/",
     },
@@ -48,7 +48,7 @@ export default function OfficialLinks() {
       id: "authentication",
       title: "Authentication & Legalization Service",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd.png#x=206,y=490,w=95,h=58",
+        "/service/sectionThree/authentication.webp",
       buttonText: "Visit Site",
       url: "https://www.ethiopianembassy.org/authentication-services/",
     },
@@ -56,7 +56,7 @@ export default function OfficialLinks() {
       id: "laissez-passer",
       title: "LAISSEZ PASSER",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd.png#x=445,y=490,w=95,h=58",
+        "/service/sectionThree/efedri.webp",
       buttonText: "Visit Site",
       url: "https://www.ethiopianembassy.org/laissez-passer/",
     },

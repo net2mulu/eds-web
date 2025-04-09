@@ -24,7 +24,7 @@ export default function ServiceCards() {
       description:
         "Supports diaspora members in participating in investment and business sectors in Ethiopia.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=188,y=118,w=339,h=278",
+        "/service/sectionTwo/mony.webp",
       icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=75,y=55,w=30,h=30",
     },
     {
@@ -33,7 +33,7 @@ export default function ServiceCards() {
       description:
         "Facilitates diaspora involvement in Ethiopian investment opportunities.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=469,y=118,w=339,h=278",
+        "/service/sectionTwo/invest.webp",
       icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=355,y=55,w=30,h=30",
     },
     {
@@ -42,7 +42,7 @@ export default function ServiceCards() {
       description:
         "Assists diaspora members in acquiring TIN for financial or business activities.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=743,y=118,w=339,h=278",
+        "/service/sectionTwo/TIN.webp",
       icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=635,y=55,w=30,h=30",
     },
     {
@@ -51,7 +51,7 @@ export default function ServiceCards() {
       description:
         "Allows diaspora members to open foreign currency accounts in Ethiopia.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=188,y=536,w=339,h=278",
+        "/service/sectionTwo/mony2.webp",
       icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=75,y=473,w=30,h=30",
     },
     {
@@ -60,7 +60,7 @@ export default function ServiceCards() {
       description:
         "Supports diaspora members in converting savings from foreign currency to birr for housing development projects.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=469,y=536,w=339,h=278",
+        "/service/sectionTwo/BUILDING.webp",
       icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=355,y=473,w=30,h=30",
     },
     {
@@ -69,7 +69,7 @@ export default function ServiceCards() {
       description:
         "Empowers diaspora professionals to share expertise and skills in Ethiopia.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=743,y=536,w=339,h=278",
+        "/service/sectionTwo/Knowledge.webp",
       icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=635,y=473,w=30,h=30",
     },
     {
@@ -78,7 +78,7 @@ export default function ServiceCards() {
       description:
         "Assists diaspora members in requesting refunds for purchased bonds.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=188,y=954,w=339,h=278",
+        "/service/sectionTwo/dam2.webp",
       icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=75,y=891,w=30,h=30",
     },
     {
@@ -87,7 +87,7 @@ export default function ServiceCards() {
       description:
         "Educates and promotes the use of legal channels for remittances to Ethiopia.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=469,y=954,w=339,h=278",
+        "/service/sectionTwo/mony3.webp",
       icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=355,y=891,w=30,h=30",
     },
     {
@@ -96,7 +96,7 @@ export default function ServiceCards() {
       description:
         "Addresses diaspora challenges related to investment and development activities in Ethiopia.",
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=743,y=954,w=339,h=278",
+        "/service/sectionTwo/governance.webp",
       icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OxvwCRrfZeFbG1qYF55HNsZl9u3nv7.png#x=635,y=891,w=30,h=30",
     },
   ];
