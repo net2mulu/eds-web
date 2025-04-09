@@ -8,7 +8,6 @@ import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// Hard-coded flag to control whether to show the coming soon page
 // This should match the value in page.tsx
 const SHOW_COMING_SOON = true;
 
