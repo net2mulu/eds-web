@@ -77,7 +77,7 @@ const GERDDonation = () => {
                   target="_blank"
                 >
                   <Button className="flex-1 bg-[#d1b06c] hover:bg-[#c19a49] text-[#0d2461] font-medium">
-                    Go to donation
+                    Donate Now
                   </Button>
                 </Link>
               </div>
