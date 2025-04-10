@@ -36,19 +36,19 @@ const heroSlides: HeroSlide[] = [
       "Empowering visionary global changemakers to invest, innovate, and create sustainable progress for Ethiopia.",
     avatarItems: [
       {
-        src: "/Home/sectionOne/slideTwo/abiy.webp",
+        src: "/Home/sectionOne/slideTwo/image (28).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-1 col-span-2 row-start-1 row-span-5",
         className: "slow-scale-avatar",
       },
       {
-        src: "/Home/sectionOne/slideTwo/fitsum.webp",
+        src: "/Home/sectionOne/slideTwo/abiy.webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-3 col-span-3 row-start-2 row-span-6",
         className: "slow-scale-avatar",
       },
       {
-        src: "/Home/sectionOne/slideTwo/bnalf.webp",
+        src: "/Home/sectionOne/slideTwo/image (29).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-6 col-span-3 row-start-1 row-span-5",
         className: "slow-scale-avatar",
@@ -68,51 +68,51 @@ const heroSlides: HeroSlide[] = [
     collageClassName: "floating-collage",
     avatarItems: [
       {
-        src: "/Home/sectionOne/slideOne/image1.webp",
+        src: "/Home/sectionOne/slideOne/image (4).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-1 col-span-1 row-start-2 row-span-1",
         className: "floating-avatar",
       },
       {
-        src: "/Home/sectionOne/slideOne/image2.webp",
+        src: "/Home/sectionOne/slideOne/image (5).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-2 col-span-3 row-start-1 row-span-3",
         className: "floating-avatar",
       },
       {
-        src: "/Home/sectionOne/slideOne/image3.webp",
+        src: "/Home/sectionOne/slideOne/image (12).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-5 col-span-1 row-start-1 row-span-1",
         className: "floating-avatar",
       },
       {
-        src: "/Home/sectionOne/slideOne/image4.webp",
+        src: "/Home/sectionOne/slideOne/image (26).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-6 col-span-1 row-start-1 row-span-1",
         clipped: true,
         className: "floating-avatar",
       },
       {
-        src: "/Home/sectionOne/slideOne/image6.webp",
+        src: "/Home/sectionOne/slideOne/image (13).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-7 col-span-1 row-start-2 row-span-1",
         clipped: true,
         className: "floating-avatar",
       },
       {
-        src: "/Home/sectionOne/slideOne/image7.webp",
+        src: "/Home/sectionOne/slideOne/image (25).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-7 col-span-1 row-start-3 row-span-1",
         className: "floating-avatar",
       },
       {
-        src: "/Home/sectionOne/slideOne/image5.webp",
+        src: "/Home/sectionOne/slideOne/image (27).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-5 col-span-2 row-start-2 row-span-2",
         className: "floating-avatar",
       },
       {
-        src: "/Home/sectionOne/slideOne/image10.webp",
+        src: "/Home/sectionOne/slideOne/image (16).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-8 col-span-1 row-start-3 row-span-1",
         roundedFull: true,
@@ -120,19 +120,19 @@ const heroSlides: HeroSlide[] = [
         className: "floating-avatar",
       },
       {
-        src: "/Home/sectionOne/slideOne/image11.webp",
+        src: "/Home/sectionOne/slideOne/image (17).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-3 col-span-2 row-start-4 row-span-2",
         className: "floating-avatar",
       },
       {
-        src: "/Home/sectionOne/slideOne/image12.webp",
+        src: "/Home/sectionOne/slideOne/image (23).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-5 col-span-1 row-start-4 row-span-1",
         className: "floating-avatar",
       },
       {
-        src: "/Home/sectionOne/slideOne/image9.webp",
+        src: "/Home/sectionOne/slideOne/image (24).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-2 col-span-1 row-start-4 row-span-1",
         className: "floating-avatar",
@@ -140,6 +140,9 @@ const heroSlides: HeroSlide[] = [
      
     ],
   },
+
+
+
   {
     id: 3,
     title: "Stay Informed, Stay Connected, Stay Involved",
@@ -147,7 +150,7 @@ const heroSlides: HeroSlide[] = [
       "Empowering the Ethiopian Diaspora to stay informed, engaged, and connected with the latest news, events, and essential resources for collective progress.",
     avatarItems: [
       {
-        src: "/Home/sectionOne/slideThree/bilene.webp",
+        src: "/Home/sectionOne/slideThree/image (30).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-1 col-span-2 row-start-1 row-span-3",
         className: "creative-layout-avatar",
@@ -159,19 +162,19 @@ const heroSlides: HeroSlide[] = [
         className: "creative-layout-avatar",
       },
       {
-        src: "/Home/sectionOne/slideThree/fitsumTwo.webp",
+        src: "/Home/sectionOne/slideThree/image (31).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-7 col-span-2 row-start-1 row-span-2",
         className: "creative-layout-avatar",
       },
       {
-        src: "/Home/sectionOne/slideThree/gedion.webp",
+        src: "/Home/sectionOne/slideThree/image (32).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-1 col-span-3 row-start-5 row-span-3",
         className: "creative-layout-avatar",
       },
       {
-        src: "/Home/sectionOne/slideThree/gedion2.webp",
+        src: "/Home/sectionOne/slideThree/image (33).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-6 col-span-5 row-start-5 row-span-2",
         roundedFull: false,
@@ -186,13 +189,13 @@ const heroSlides: HeroSlide[] = [
       "Empowering Ethiopians abroad with tailored support, dedicated services, and expert guidance to overcome challenges, build stronger communities, and celebrate our shared heritage.",
     avatarItems: [
       {
-        src: "/Home/sectionOne/slideFour/supportwomen.webp",
+        src: "/Home/sectionOne/slideFour/image (35).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-1 col-span-4 row-start-1 row-span-6",
         className: "dramatic-avatar",
       },
       {
-        src: "/Home/sectionOne/slideFour/supportman.webp",
+        src: "/Home/sectionOne/slideFour/image (34).webp",
         alt: "Ethiopian portrait",
         gridClasses: "col-start-5 col-span-4 row-start-1 row-span-6",
         className: "dramatic-avatar",
