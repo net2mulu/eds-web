@@ -1,4 +1,3 @@
-import Hero from "@/components/hero";
 import ComingSoon from "@/components/coming-soon";
 import WhoWeAre from "@/components/who-we-are";
 import OurApproach from "@/components/our-approach";
@@ -10,6 +9,7 @@ import Testimonials from "@/components/testimonials";
 import GERDDonation from "@/components/gerd-donation";
 import UpcomingEvents from "@/components/upcoming-events";
 import NewsSection from "@/components/news-section";
+import HeroCarousel from "@/components/hero-carousel";
 
 // Hard-coded flag to control whether to show the coming soon page
 // Set to true to show coming soon page, false to show the normal site
@@ -25,7 +25,7 @@ export default function Home() {
   // Normal site content
   return (
     <div className="min-h-screen">
-      <Hero />
+      <HeroCarousel />
       <WhoWeAre />
       <GERDDonation />
       <OurApproach />

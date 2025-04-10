@@ -31,27 +31,21 @@ export default function Navigation() {
 
   return (
     <div className="w-full h-0">
-      <header
-        className={cn(
-          "fixed top-4 left-0 right-0 z-50 w-full transition-all duration-300 px-4"
-        )}
-      >
+      <header className="fixed top-4 left-0 right-0 z-50 w-full transition-all duration-300 px-4">
         <div
           className={cn(
-            "w-full mx-auto rounded-xl transition-all duration-300",
+            "w-full mx-auto rounded-xl transition-all duration-300 shadow-lg",
             isHomePage
-              ? isScrolled
-                ? "bg-navy-900/95 backdrop-blur-sm shadow-lg"
-                : "bg-navy-900 shadow-md"
+              ? "bg-[#3B3B3B99] backdrop-blur-md"
               : isScrolled
-              ? "bg-white/95 backdrop-blur-sm shadow-lg"
-              : "bg-white shadow-md"
+              ? "bg-white/95 backdrop-blur-sm"
+              : "bg-white"
           )}
         >
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Logo%20%281%29-frb9OMQGJ8kY7zQzmbFmER06HXw6NT.png"
+                src="/log.png"
                 alt="Ethiopian Diaspora Service Logo"
                 width={180}
                 height={60}
@@ -72,7 +66,7 @@ export default function Navigation() {
                 </Button>
 
                 {isMenuOpen && (
-                  <div className="absolute top-full left-0 right-0 mt-2 mx-4 bg-white rounded-xl shadow-lg py-4 z-50 border border-gray-100">
+                  <div className="absolute top-full left-0 right-0 mt-2 mx-4 bg-white/90 backdrop-blur-md rounded-xl shadow-lg py-4 z-50 border border-gray-100">
                     <nav className="flex flex-col space-y-2 px-4">
                       <Link
                         href="/"
@@ -96,19 +90,19 @@ export default function Navigation() {
                         Services
                       </Link>
                       <Link
-                        href="/news"
+                        href="/news-events"
                         className="text-navy-900 hover:text-gold-400 transition-colors py-3 border-b border-gray-100"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         News and Events
                       </Link>
-                      {/* <Link
+                      <Link
                         href="/resources"
                         className="text-navy-900 hover:text-gold-400 transition-colors py-3 border-b border-gray-100"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Resources
-                      </Link> */}
+                      </Link>
                       <Link
                         href="/contact"
                         className="bg-gold-400 text-navy-900 hover:bg-gold-500 transition-colors py-3 px-4 rounded text-center mt-2"
@@ -150,7 +144,7 @@ export default function Navigation() {
                   Services
                 </Link>
                 <Link
-                  href="/news"
+                  href="/news-events"
                   className={cn(
                     "hover:text-gold-400 transition-colors",
                     isHomePage ? "text-white" : "text-navy-900"
@@ -158,7 +152,7 @@ export default function Navigation() {
                 >
                   News and Events
                 </Link>
-                {/* <Link
+                <Link
                   href="/resources"
                   className={cn(
                     "hover:text-gold-400 transition-colors",
@@ -166,7 +160,7 @@ export default function Navigation() {
                   )}
                 >
                   Resources
-                </Link> */}
+                </Link>
                 <Link
                   href="/contact"
                   className="bg-gold-400 text-navy-900 hover:bg-gold-500 transition-colors py-2 px-6 rounded"
