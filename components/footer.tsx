@@ -187,7 +187,7 @@ const Footer = () => {
                   className="mr-2 text-[#d1b06c] mt-1 flex-shrink-0"
                 />
                 <span className="text-gray-300">
-                  123 Main Street, Suite 456
+                  Bloom Tower @5th & 6th floor
                   <br />
                   Addis Ababa, Ethiopia
                 </span>
@@ -197,12 +197,12 @@ const Footer = () => {
                   size={20}
                   className="mr-2 text-[#d1b06c] flex-shrink-0"
                 />
-                <span className="text-gray-300">+251 11 234 5678</span>
+                <span className="text-gray-300">011 554 4600</span>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="mr-2 text-[#d1b06c] flex-shrink-0" />
                 <span className="text-gray-300">
-                  info@ethiopiandiaspora.org
+                  diaspora.service@mfa.gov.et
                 </span>
               </li>
             </ul>
