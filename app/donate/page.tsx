@@ -179,7 +179,7 @@ export default function DonationPage() {
               <CardHeader className="bg-[#0a1e56] text-white rounded-t-lg">
                 <CardTitle className="flex items-center">
                   <Droplet className="mr-2 h-5 w-5" />
-                  Abay Dam
+                  GERD
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
