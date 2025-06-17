@@ -45,11 +45,11 @@ export default function Navigation() {
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center">
               <Image
-                src="/log.png"
+                src={isHomePage ? "/white.png" : "/blue.png"}
                 alt="Ethiopian Diaspora Service Logo"
                 width={180}
                 height={60}
-                className="h-12 w-auto"
+                className="h-12 w-auto "
               />
             </Link>
 
