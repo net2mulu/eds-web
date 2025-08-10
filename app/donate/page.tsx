@@ -179,7 +179,7 @@ export default function DonationPage() {
               <CardHeader className="bg-[#0a1e56] text-white rounded-t-lg">
                 <CardTitle className="flex items-center">
                   <Droplet className="mr-2 h-5 w-5" />
-                  GERD
+                  Mekedonia
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
@@ -200,7 +200,7 @@ export default function DonationPage() {
               <CardHeader className="bg-[#0a1e56] text-white rounded-t-lg">
                 <CardTitle className="flex items-center">
                   <BookOpen className="mr-2 h-5 w-5" />
-                  Education
+                  Gergesenon
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
@@ -221,7 +221,7 @@ export default function DonationPage() {
               <CardHeader className="bg-[#0a1e56] text-white rounded-t-lg">
                 <CardTitle className="flex items-center">
                   <Stethoscope className="mr-2 h-5 w-5" />
-                  Healthcare
+                  Nia Foundation
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
@@ -242,7 +242,7 @@ export default function DonationPage() {
               <CardHeader className="bg-[#0a1e56] text-white rounded-t-lg">
                 <CardTitle className="flex items-center">
                   <Building className="mr-2 h-5 w-5" />
-                  Infrastructure
+                  Dibora foundation
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
