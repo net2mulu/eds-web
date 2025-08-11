@@ -184,8 +184,7 @@ export default function DonationPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <CardDescription className="text-gray-700 text-base min-h-[80px]">
-                  Help power Ethiopia's future through sustainable energy and
-                  support the Great Ethiopian Renaissance Dam.
+                Mekedonia provides shelter, food, and care to Ethiopia’s vulnerable, empowering them through vocational training and compassionate support. Your help brings hope and renewed lives.
                 </CardDescription>
               </CardContent>
               <CardFooter>
@@ -205,8 +204,7 @@ export default function DonationPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <CardDescription className="text-gray-700 text-base min-h-[80px]">
-                  Fund schools, supplies, and scholarship programs to empower
-                  the next generation of Ethiopian leaders.
+                 Provide shelter, care, and hope to people with mental health challenges who’ve been forgotten—offering rehabilitative services and community reintegration in a stigma-free setting.
                 </CardDescription>
               </CardContent>
               <CardFooter>
@@ -226,8 +224,7 @@ export default function DonationPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <CardDescription className="text-gray-700 text-base min-h-[80px]">
-                  Support clinics, medical equipment, and healthcare outreach
-                  programs across Ethiopia.
+                 Nia Foundation empowers children with autism through education and therapy, promoting inclusion and community awareness. Support helps build a more inclusive Ethiopia.
                 </CardDescription>
               </CardContent>
               <CardFooter>
@@ -247,8 +244,7 @@ export default function DonationPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <CardDescription className="text-gray-700 text-base min-h-[80px]">
-                  Invest in long-term community development projects that
-                  strengthen Ethiopia's foundation.
+                  Foster inclusive growth in Ethiopia—empower children with Down syndrome and intellectual disabilities through healthcare, education, and advocacy that builds brighter, more compassionate communities.
                 </CardDescription>
               </CardContent>
               <CardFooter>
