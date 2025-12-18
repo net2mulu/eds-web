@@ -21,9 +21,9 @@ const config = {
     extend: {
       colors: {
         navy: {
-          900: "#0c2461",
-          800: "#1e3799",
-          700: "#3742fa",
+          900: "#11255A", // Primary Dark Navy
+          800: "#083A51", // Secondary Dark Blue from gradient
+          700: "#0E5F84", // Lighter Blue/Teal from gradient
         },
         gold: {
           400: "#d1b06c",

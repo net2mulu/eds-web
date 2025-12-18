@@ -21,7 +21,7 @@ const heroSlides: HeroSlide[] = [
     id: 1,
     title: "Rediscover\nHome",
     subtitle: "Discover the Heart\nand Heritage of Ethiopia",
-    imageUrl: "/hero/1.png",
+    imageUrl: "/hero/eds1.jpg",
     ctaText: "Ethiopian Reimagined ",
     ctaLink: "/about",
   },
@@ -30,7 +30,7 @@ const heroSlides: HeroSlide[] = [
     title: "A fresh era of\nunity and vision",
     subtitle:
       "Experience Ethiopia's breathtaking\nlandscapes and serene waters",
-    imageUrl: "/hero/2.jpg",
+    imageUrl: "/hero/eds30.jpeg",
     ctaText: "Explore",
     ctaLink: "/resources",
   },

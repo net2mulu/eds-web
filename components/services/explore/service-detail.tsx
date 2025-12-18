@@ -1,7 +1,7 @@
-import type { service } from "@/lib/services-data";
+import type { ServiceItem } from "@/lib/services-data";
 
 interface ServiceDetailProps {
-  service: Service;
+  service: ServiceItem;
 }
 
 export default function ServiceDetail({ service }: ServiceDetailProps) {
@@ -22,11 +22,11 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
         </div>
       )}
 
-      {service.additionalInfo && service.additionalInfo.length > 0 && (
+      {service.remainder && service.remainder.length > 0 && (
         <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
           <h3 className="font-medium text-navy-900 mb-2">Remainder:-</h3>
           <ul className="list-disc pl-5 space-y-2">
-            {service.additionalInfo.map((info, index) => (
+            {service.remainder.map((info, index) => (
               <li key={index} className="text-gray-700">
                 {info}
               </li>

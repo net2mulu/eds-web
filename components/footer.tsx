@@ -14,7 +14,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[#0d2461] text-white pt-16 pb-8 overflow-hidden">
+    <footer className="relative bg-navy-900 text-white pt-16 pb-8 overflow-hidden">
       {/* Vector graphic in bottom left */}
       <div className="absolute bottom-0 left-0 w-64 h-64 opacity-70">
         <Image
@@ -30,7 +30,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Column 1: About */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-[#d1b06c]">
+            <h3 className="text-xl font-bold mb-4 text-gold-400">
               Ethiopian Diaspora Service
             </h3>
             <p className="text-gray-300 mb-4">
@@ -40,28 +40,28 @@ const Footer = () => {
             <div className="flex space-x-4">
               <Link
                 href="#"
-                className="text-gray-300 hover:text-[#d1b06c] transition-colors"
+                className="text-gray-300 hover:text-gold-400 transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
               </Link>
               <Link
                 href="#"
-                className="text-gray-300 hover:text-[#d1b06c] transition-colors"
+                className="text-gray-300 hover:text-gold-400 transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter size={20} />
               </Link>
               <Link
                 href="#"
-                className="text-gray-300 hover:text-[#d1b06c] transition-colors"
+                className="text-gray-300 hover:text-gold-400 transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
               </Link>
               <Link
                 href="#"
-                className="text-gray-300 hover:text-[#d1b06c] transition-colors"
+                className="text-gray-300 hover:text-gold-400 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -71,7 +71,7 @@ const Footer = () => {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-[#d1b06c]">
+            <h3 className="text-xl font-bold mb-4 text-gold-400">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -128,7 +128,7 @@ const Footer = () => {
 
           {/* Column 3: Programs */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-[#d1b06c]">
+            <h3 className="text-xl font-bold mb-4 text-gold-400">
               Our Programs
             </h3>
             <ul className="space-y-2">
@@ -177,14 +177,14 @@ const Footer = () => {
 
           {/* Column 4: Contact */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-[#d1b06c]">
+            <h3 className="text-xl font-bold mb-4 text-gold-400">
               Contact Us
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin
                   size={20}
-                  className="mr-2 text-[#d1b06c] mt-1 flex-shrink-0"
+                  className="mr-2 text-gold-400 mt-1 flex-shrink-0"
                 />
                 <span className="text-gray-300">
                   Bloom Tower @5th & 6th floor
@@ -195,12 +195,12 @@ const Footer = () => {
               <li className="flex items-center">
                 <Phone
                   size={20}
-                  className="mr-2 text-[#d1b06c] flex-shrink-0"
+                  className="mr-2 text-gold-400 flex-shrink-0"
                 />
                 <span className="text-gray-300">011 554 4600</span>
               </li>
               <li className="flex items-center">
-                <Mail size={20} className="mr-2 text-[#d1b06c] flex-shrink-0" />
+                <Mail size={20} className="mr-2 text-gold-400 flex-shrink-0" />
                 <span className="text-gray-300">
                   diaspora.service@mfa.gov.et
                 </span>

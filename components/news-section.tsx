@@ -59,7 +59,7 @@ const NewsSection = () => {
           <div className="inline-flex items-center border border-gray-300 rounded-full px-4 py-1 mb-4">
             <span className="text-gray-700 font-medium">News</span>
           </div>
-          <h2 className="text-3xl font-bold text-[#0d2461] mb-3">
+          <h2 className="text-3xl font-bold text-navy-900 mb-3">
             Stay Updated with EDS
           </h2>
           <p className="text-gray-700">
@@ -74,7 +74,7 @@ const NewsSection = () => {
               key={item.id}
               className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <div className="relative h-40 bg-[#0d2461]">
+              <div className="relative h-40 bg-navy-900">
                 <Image
                   src={item.image || "/placeholder.svg"}
                   alt={item.title}
@@ -82,7 +82,7 @@ const NewsSection = () => {
                   className="object-cover opacity-90"
                 />
               </div>
-              <div className="p-4 bg-[#0d2461] text-white">
+              <div className="p-4 bg-navy-900 text-white">
                 <h3 className="font-semibold text-white mb-1 line-clamp-3 min-h-[4.5rem]">
                   {item.title}
                 </h3>
@@ -93,7 +93,7 @@ const NewsSection = () => {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="w-full border-white hover:bg-white text-[#0d2461]"
+                  className="w-full border-white hover:bg-white text-navy-900"
                 >
                   Read More
                 </Button>

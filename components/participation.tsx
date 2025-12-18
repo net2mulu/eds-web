@@ -49,7 +49,7 @@ export default function ParticipationTabs() {
   const activeContent = tabContents.find((tab) => tab.id === activeTab);
 
   return (
-    <section className="bg-gradient-to-tr from-[#1e5799] to-[#0c2461] text-white py-0">
+    <section className="bg-gradient-to-tr from-navy-700 to-navy-900 text-white py-0">
       <div className="container py-0 mx-auto px-0">
         <div className="flex flex-col md:flex-row min-h-[600px]">
           {/* Left side - Text and tabs */}

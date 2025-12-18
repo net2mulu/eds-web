@@ -101,7 +101,7 @@ const UpcomingEvents = () => {
           <div className="inline-flex items-center border border-gray-300 rounded-full px-4 py-1 mb-4">
             <span className="text-gray-700 font-medium">Upcoming Events</span>
           </div>
-          <h2 className="text-4xl font-bold mb-4 text-[#0d2461]">
+          <h2 className="text-4xl font-bold mb-4 text-navy-900">
             Upcoming Events
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
@@ -119,7 +119,7 @@ const UpcomingEvents = () => {
               transform: isVisible ? "translateY(0)" : "translateY(20px)",
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0d2461] via-[#0d2461]/70 to-transparent z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/70 to-transparent z-10"></div>
             <Image
               src={events[activeIndex].image || "/placeholder.svg"}
               alt={events[activeIndex].title}
@@ -128,9 +128,8 @@ const UpcomingEvents = () => {
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
               <div
-                className={`text-xs font-bold inline-block px-3 py-1 rounded-full mb-3 ${
-                  categoryColors[events[activeIndex].category].badge
-                }`}
+                className={`text-xs font-bold inline-block px-3 py-1 rounded-full mb-3 ${categoryColors[events[activeIndex].category].badge
+                  }`}
               >
                 {events[activeIndex].category.toUpperCase()}
               </div>
@@ -150,7 +149,7 @@ const UpcomingEvents = () => {
                 <MapPin size={16} className="mr-2" />
                 <span>{events[activeIndex].location}</span>
               </div>
-              <Button className="bg-[#d1b06c] hover:bg-[#c19a49] text-white group">
+              <Button className="bg-gold-400 hover:bg-gold-500 text-white group">
                 Register Now
                 <ArrowRight
                   size={16}
@@ -165,11 +164,9 @@ const UpcomingEvents = () => {
             {events.map((event, index) => (
               <Card
                 key={event.id}
-                className={`p-0 overflow-hidden cursor-pointer transition-all duration-300 border-l-4 ${
-                  categoryColors[event.category].accent
-                } ${
-                  activeIndex === index ? "ring-2 ring-[#d1b06c]" : ""
-                } shadow-sm hover:shadow-md`}
+                className={`p-0 overflow-hidden cursor-pointer transition-all duration-300 border-l-4 ${categoryColors[event.category].accent
+                  } ${activeIndex === index ? "ring-2 ring-gold-400" : ""
+                  } shadow-sm hover:shadow-md`}
                 onClick={() => setActiveIndex(index)}
                 style={{
                   opacity: isVisible ? 1 : 0,
@@ -188,13 +185,12 @@ const UpcomingEvents = () => {
                   </div>
                   <div className="p-4 flex-1">
                     <div
-                      className={`text-xs font-bold inline-block px-2 py-1 rounded-full mb-2 ${
-                        categoryColors[event.category].badge
-                      }`}
+                      className={`text-xs font-bold inline-block px-2 py-1 rounded-full mb-2 ${categoryColors[event.category].badge
+                        }`}
                     >
                       {event.category.toUpperCase()}
                     </div>
-                    <h3 className="font-semibold text-[#0d2461] mb-1 line-clamp-2">
+                    <h3 className="font-semibold text-navy-900 mb-1 line-clamp-2">
                       {event.title}
                     </h3>
                     <div className="flex items-center text-sm text-gray-600 mb-1">
@@ -210,7 +206,7 @@ const UpcomingEvents = () => {
 
             <Button
               variant="outline"
-              className="mt-2 w-full border-[#0d2461] text-[#0d2461] hover:bg-[#0d2461] hover:text-white"
+              className="mt-2 w-full border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white"
             >
               View All Events
             </Button>

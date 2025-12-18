@@ -69,7 +69,7 @@ export default function OfficialLinks() {
           <div className="inline-flex items-center border border-gray-300 rounded-full px-4 py-1 mb-6 bg-white shadow-sm">
             <span className="text-navy-900 font-medium">Official Links</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0288d1] mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-900 mb-6">
             Official Site Links to Consular Services
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -110,7 +110,7 @@ export default function OfficialLinks() {
                   )}
                   {link.id === "power-of-attorney" && (
                     <motion.div
-                      className="mt-2 px-5 py-2 rounded-full bg-[#0288d1]/10 text-[#0288d1] text-sm font-medium"
+                      className="mt-2 px-5 py-2 rounded-full bg-navy-900/10 text-navy-900 text-sm font-medium"
                       whileHover={{
                         scale: 1.05,
                         backgroundColor: "rgba(2, 136, 209, 0.2)",
@@ -121,7 +121,7 @@ export default function OfficialLinks() {
                     </motion.div>
                   )}
                 </div>
-                <div className="bg-gradient-to-r from-navy-900 to-[#0d3a6e] p-5">
+                <div className="bg-gradient-to-r from-navy-900 to-navy-800 p-5">
                   <h3 className="text-white font-bold text-center mb-4">
                     {link.title}
                   </h3>

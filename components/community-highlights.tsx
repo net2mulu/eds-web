@@ -98,7 +98,7 @@ export default function CommunityHighlights() {
           <div className="inline-block px-4 py-1 border border-navy-900 rounded-full text-navy-900 font-medium mb-6">
             Community Highlights
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[#0e87be] max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-navy-900 max-w-4xl mx-auto">
             Inspiring Stories, Shared Success
           </h2>
         </div>
@@ -146,9 +146,8 @@ export default function CommunityHighlights() {
                     >
                       Read More
                       <ArrowRight
-                        className={`ml-2 h-4 w-4 transition-transform duration-300 ${
-                          hoveredCard === card.id ? "translate-x-1" : ""
-                        }`}
+                        className={`ml-2 h-4 w-4 transition-transform duration-300 ${hoveredCard === card.id ? "translate-x-1" : ""
+                          }`}
                       />
                     </Link>
                   </div>

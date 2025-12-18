@@ -31,7 +31,7 @@ const Testimonials = () => {
           <div className="inline-flex items-center border border-gray-300 rounded-full px-4 py-1 mb-4">
             <span className="text-navy-900 font-medium">Testimonials</span>
           </div>
-          <h2 className="text-4xl font-bold mb-4 text-[#0e87be]">
+          <h2 className="text-4xl font-bold mb-4 text-navy-900">
             Voices of Connection & Impact
           </h2>
           <p className="text-lg text-gray-700">

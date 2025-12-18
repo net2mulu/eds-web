@@ -54,7 +54,7 @@ export default function JoinBanner() {
         />
 
         {/* Overlay with brand colors */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-900/80 to-[#0e87be]/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-900/80 to-navy-700/70"></div>
 
         {/* Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">

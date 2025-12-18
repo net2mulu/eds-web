@@ -12,7 +12,7 @@ export default function SectionHeader({
   title,
   description,
   align = "center",
-  titleColor = "text-[#0e87be]",
+  titleColor = "text-navy-900",
   className = "",
 }: SectionHeaderProps) {
   const alignmentClasses = {

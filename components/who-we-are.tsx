@@ -9,7 +9,7 @@ export default function WhoWeAre() {
             <div className="inline-block px-4 py-1 border border-navy-900 rounded-full text-navy-900 font-medium mb-6">
               WHO WE ARE
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0e87be] mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-900 mb-6">
               Fostering Global Unity for a Prosperous Ethiopia
             </h2>
             <p className="text-gray-700 text-lg">

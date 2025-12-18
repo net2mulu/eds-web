@@ -3,7 +3,7 @@
 import { useRef, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { allServices } from "@/lib/services-data";
+import { servicesData } from "@/lib/services-data";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ServiceTabsProps {
@@ -71,7 +71,7 @@ export default function ServiceTabs({ activeServiceId }: ServiceTabsProps) {
         className="flex overflow-x-auto scrollbar-hide py-2 px-8 bg-white rounded-lg shadow-sm"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        {allServices.map((service) => (
+        {servicesData.map((service) => (
           <Link
             key={service.id}
             href={`/services/explore?service=${service.id}`}

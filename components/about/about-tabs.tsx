@@ -151,7 +151,7 @@ export default function AboutTabs() {
   ];
 
   return (
-    <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy-900 via-[#0e3a7e] to-[#0c2461] text-white">
+    <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 text-white">
       {/* Decorative elements - contained within the section */}
       <div className="absolute top-0 left-0 w-32 h-32 bg-gold-400 opacity-5 rounded-full"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-navy-700 opacity-10 rounded-full"></div>
@@ -219,9 +219,8 @@ export default function AboutTabs() {
                     tabsContent.find((tab) => tab.id === activeTab)?.image ||
                     "/placeholder.svg"
                   }
-                  alt={`${
-                    tabsContent.find((tab) => tab.id === activeTab)?.title
-                  } illustration`}
+                  alt={`${tabsContent.find((tab) => tab.id === activeTab)?.title
+                    } illustration`}
                   fill
                   className="object-cover"
                 />

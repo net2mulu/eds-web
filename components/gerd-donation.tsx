@@ -47,16 +47,16 @@ const GERDDonation = () => {
         </div>
 
         {/* Right side - Donation form */}
-        <div className="bg-[#1a3a8f] text-white p-8 lg:p-12 flex flex-col justify-center">
+        <div className="bg-navy-800 text-white p-8 lg:p-12 flex flex-col justify-center">
           <div className="max-w-md mx-auto">
-            <div className="inline-flex items-center border border-[#d1b06c]/30 rounded-full px-4 py-1 mb-4">
-              <span className="text-[#d1b06c] font-medium">DONATE</span>
+            <div className="inline-flex items-center border border-gold-400/30 rounded-full px-4 py-1 mb-4">
+              <span className="text-gold-400 font-medium">DONATE</span>
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Contribute for the GERD
               <br />
-              <span className="text-[#d1b06c]">- Ethiopia's Renaissance</span>
+              <span className="text-gold-400">- Ethiopia's Renaissance</span>
             </h2>
 
             <p className="mb-8 text-white/90">
@@ -76,7 +76,7 @@ const GERDDonation = () => {
                   href="https://fastpayet.com/donation/view/JeyK6PndcBl1V6XwafVr"
                   target="_blank"
                 >
-                  <Button className="flex-1 bg-[#d1b06c] hover:bg-[#c19a49] text-[#0d2461] font-medium">
+                  <Button className="flex-1 bg-gold-400 hover:bg-gold-500 text-navy-900 font-medium">
                     Donate Now
                   </Button>
                 </Link>

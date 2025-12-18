@@ -1,0 +1,13 @@
+﻿.next/types/app/services/explore/page.ts(34,29): error TS2344: Type '{ searchParams: { [key: string]: string | string[] | undefined; }; }' does not satisfy the constraint 'PageProps'.
+  Types of property 'searchParams' are incompatible.
+    Type '{ [key: string]: string | string[] | undefined; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+app/services/explore/page.tsx(73,64): error TS2339: Property 'description' does not exist on type 'ServiceItem'.
+components/services/explore/service-detail.tsx(1,15): error TS2305: Module '"@/lib/services-data"' has no exported member 'service'.
+components/services/explore/service-detail.tsx(4,12): error TS2304: Cannot find name 'Service'.
+components/services/explore/service-detail.tsx(16,40): error TS7006: Parameter 'requirement' implicitly has an 'any' type.
+components/services/explore/service-detail.tsx(16,53): error TS7006: Parameter 'index' implicitly has an 'any' type.
+components/services/explore/service-detail.tsx(29,42): error TS7006: Parameter 'info' implicitly has an 'any' type.
+components/services/explore/service-detail.tsx(29,48): error TS7006: Parameter 'index' implicitly has an 'any' type.
+components/services/explore/service-tabs.tsx(6,10): error TS2305: Module '"@/lib/services-data"' has no exported member 'allServices'.
+components/services/explore/service-tabs.tsx(74,27): error TS7006: Parameter 'service' implicitly has an 'any' type.
+components/ui/sidebar.tsx(8,10): error TS2724: '"@/hooks/use-mobile"' has no exported member named 'useIsMobile'. Did you mean 'useMobile'?

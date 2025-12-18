@@ -80,7 +80,7 @@ export default function OurApproach() {
           <div className="inline-block px-4 py-1 border border-navy-900 rounded-full text-navy-900 font-medium mb-6">
             OUR APPROACH
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[#0e87be]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-navy-900">
             Building Bridges, Driving Progress
           </h2>
         </div>

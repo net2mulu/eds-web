@@ -175,7 +175,7 @@ export default function HeroSlider() {
                     <path
                       d="M0,0 C20,10 50,30 80,10 L100,0 L100,100 L0,100 Z"
                       fill="none"
-                      stroke="#0c2461"
+                      stroke="#11255A"
                       strokeWidth="0.2"
                       strokeDasharray="5,5"
                     />

@@ -1,11 +1,10 @@
 import { servicesData } from "@/lib/services-data";
 import Link from "next/link";
 
-export default function ExplorePage({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
+export default async function ExplorePage(props: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
+  const searchParams = await props.searchParams;
   const serviceId =
     typeof searchParams.service === "string"
       ? searchParams.service
@@ -26,11 +25,10 @@ export default function ExplorePage({
               <Link
                 key={service.id}
                 href={`/services/explore?service=${service.id}`}
-                className={`bg-white rounded-lg p-6 transition-all ${
-                  service.id === activeService.id
-                    ? "ring-4 ring-white/50"
-                    : "hover:ring-2 hover:ring-white/30"
-                }`}
+                className={`bg-white rounded-lg p-6 transition-all ${service.id === activeService.id
+                  ? "ring-4 ring-white/50"
+                  : "hover:ring-2 hover:ring-white/30"
+                  }`}
               >
                 <h3 className="text-xl font-bold text-navy-900 mb-3">
                   {service.title}
@@ -53,11 +51,10 @@ export default function ExplorePage({
               <Link
                 key={service.id}
                 href={`/services/explore?service=${service.id}`}
-                className={`block px-4 py-3 border-b border-navy-800 last:border-b-0 transition-colors ${
-                  service.id === activeService.id
-                    ? "bg-white text-navy-900 font-medium"
-                    : "text-white hover:bg-navy-800"
-                }`}
+                className={`block px-4 py-3 border-b border-navy-800 last:border-b-0 transition-colors ${service.id === activeService.id
+                  ? "bg-white text-navy-900 font-medium"
+                  : "text-white hover:bg-navy-800"
+                  }`}
               >
                 {service.title}
               </Link>
@@ -70,7 +67,7 @@ export default function ExplorePage({
               <h1 className="text-2xl font-bold text-navy-900 mb-4">
                 {activeService.title}
               </h1>
-              <p className="text-gray-700 mb-6">{activeService.description}</p>
+              <p className="text-gray-700 mb-6">{activeService.fullDescription}</p>
 
               {activeService.requirements &&
                 activeService.requirements.length > 0 && (

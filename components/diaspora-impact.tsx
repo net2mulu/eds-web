@@ -41,7 +41,7 @@ export default function DiasporaImpact() {
           <div className="inline-block px-4 py-1 border border-navy-900 rounded-full text-navy-900 font-medium mb-6">
             Diaspora Development Participation
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[#0e87be] max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-navy-900 max-w-4xl mx-auto">
             Impacting Ethiopia's Development Through the Power of the Diaspora
           </h2>
         </div>
