@@ -10,19 +10,18 @@ import GERDDonation from "@/components/gerd-donation";
 import UpcomingEvents from "@/components/upcoming-events";
 import NewsSection from "@/components/news-section";
 import HeroCarousel from "@/components/hero-carousel";
+import { getAllEvents } from "@/lib/events-data";
+import { getAllNews } from "@/lib/news-data";
 
-// Hard-coded flag to control whether to show the coming soon page
-// Set to true to show coming soon page, false to show the normal site
 const SHOW_COMING_SOON = false;
 
-export default function Home() {
-  // If SHOW_COMING_SOON is true, render the coming soon page
-  // Otherwise, render the normal site
+export default async function Home() {
   if (SHOW_COMING_SOON) {
     return <ComingSoon />;
   }
 
-  // Normal site content
+  const [events, news] = await Promise.all([getAllEvents(), getAllNews()]);
+
   return (
     <div className="min-h-screen">
       <HeroCarousel />
@@ -34,8 +33,8 @@ export default function Home() {
       <CommunityHighlights />
       <JoinMovement />
       <Testimonials />
-      <UpcomingEvents />
-      <NewsSection />
+      <UpcomingEvents events={events} />
+      <NewsSection news={news} />
     </div>
   );
 }

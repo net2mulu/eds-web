@@ -5,56 +5,13 @@ import Image from "next/image";
 import { CalendarDays, MapPin, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import type { EventItem } from "@/lib/events-data";
 
-interface Event {
-  id: number;
-  title: string;
-  description: string;
-  date: string;
-  time: string;
-  location: string;
-  image: string;
-  category: "webinar" | "conference" | "festival" | "workshop";
+interface UpcomingEventsProps {
+  events: EventItem[];
 }
 
-const events: Event[] = [
-  {
-    id: 1,
-    title: "Cultural Exchange Webinar",
-    description:
-      "Join a panel of Ethiopian cultural experts and community leaders for an insightful discussion on bridging the gap between generations and preserving Ethiopian heritage abroad.",
-    date: "Jan 14, 2025",
-    time: "7:00 PM EST",
-    location: "Online via Zoom",
-    image: "/Home/sectionEight/CulturalExchange.webp?height=250&width=400",
-    category: "webinar",
-  },
-  {
-    id: 2,
-    title:
-      "Ethiopian Diaspora encouraged to embrace economic reforms for active role in national development",
-    description:
-      "As part of the event, a Bazaar and Exhibition showcasing financial institutions and investment opportunities in Ethiopia will be presented.",
-    date: "Jan 22, 2025",
-    time: "10:00 AM - 4:00 PM",
-    location: "Addis Ababa Exhibition Center",
-    image: "/Home/sectionEight/Ethiopian.webp?height=250&width=400",
-    category: "conference",
-  },
-  {
-    id: 3,
-    title: "Ethiopian Heritage Festival Exchange Webinar",
-    description:
-      "A celebration of Ethiopian music, art, food, and culture. Experience Ethiopia like never before through an immersive virtual event.",
-    date: "Jan 4, 2025",
-    time: "2:00 PM EST",
-    location: "Online via Zoom",
-    image: "/Home/sectionEight/lalibela.webp?height=250&width=400",
-    category: "festival",
-  },
-];
-
-const categoryColors = {
+const categoryColors: Record<string, { badge: string; accent: string }> = {
   webinar: {
     badge: "bg-blue-100 text-blue-800",
     accent: "border-l-blue-500",
@@ -73,7 +30,7 @@ const categoryColors = {
   },
 };
 
-const UpcomingEvents = () => {
+const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -81,18 +38,18 @@ const UpcomingEvents = () => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 300);
-
     return () => clearTimeout(timer);
   }, []);
 
-  // Auto-rotate events every 6 seconds
   useEffect(() => {
+    if (events.length === 0) return;
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % events.length);
     }, 6000);
-
     return () => clearInterval(interval);
-  }, []);
+  }, [events.length]);
+
+  if (events.length === 0) return null;
 
   return (
     <section className="w-full py-16 bg-gray-50">
@@ -111,7 +68,6 @@ const UpcomingEvents = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-12">
-          {/* Featured event with animation */}
           <div
             className="relative rounded-xl overflow-hidden shadow-lg transform transition-all duration-700 ease-out h-[450px]"
             style={{
@@ -121,33 +77,35 @@ const UpcomingEvents = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/70 to-transparent z-10"></div>
             <Image
-              src={events[activeIndex].image || "/placeholder.svg"}
-              alt={events[activeIndex].title}
+              src={events[activeIndex]?.image || "/placeholder.svg"}
+              alt={events[activeIndex]?.title || ""}
               fill
               className="object-cover transform transition-transform duration-700 ease-out hover:scale-105"
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
               <div
-                className={`text-xs font-bold inline-block px-3 py-1 rounded-full mb-3 ${categoryColors[events[activeIndex].category].badge
-                  }`}
+                className={`text-xs font-bold inline-block px-3 py-1 rounded-full mb-3 ${
+                  categoryColors[events[activeIndex]?.category]?.badge ||
+                  "bg-gray-100 text-gray-800"
+                }`}
               >
-                {events[activeIndex].category.toUpperCase()}
+                {(events[activeIndex]?.category || "").toUpperCase()}
               </div>
               <h3 className="text-2xl font-bold text-white mb-2 line-clamp-2">
-                {events[activeIndex].title}
+                {events[activeIndex]?.title}
               </h3>
               <p className="text-white/80 mb-4 line-clamp-3">
-                {events[activeIndex].description}
+                {events[activeIndex]?.description}
               </p>
               <div className="flex items-center text-white/90 mb-1">
                 <CalendarDays size={16} className="mr-2" />
-                <span>{events[activeIndex].date}</span>
+                <span>{events[activeIndex]?.date}</span>
                 <Clock size={16} className="ml-4 mr-2" />
-                <span>{events[activeIndex].time}</span>
+                <span>{events[activeIndex]?.time}</span>
               </div>
               <div className="flex items-center text-white/90 mb-4">
                 <MapPin size={16} className="mr-2" />
-                <span>{events[activeIndex].location}</span>
+                <span>{events[activeIndex]?.location}</span>
               </div>
               <Button className="bg-gold-400 hover:bg-gold-500 text-white group">
                 Register Now
@@ -159,14 +117,15 @@ const UpcomingEvents = () => {
             </div>
           </div>
 
-          {/* Event cards */}
           <div className="grid grid-cols-1 gap-4">
             {events.map((event, index) => (
               <Card
                 key={event.id}
-                className={`p-0 overflow-hidden cursor-pointer transition-all duration-300 border-l-4 ${categoryColors[event.category].accent
-                  } ${activeIndex === index ? "ring-2 ring-gold-400" : ""
-                  } shadow-sm hover:shadow-md`}
+                className={`p-0 overflow-hidden cursor-pointer transition-all duration-300 border-l-4 ${
+                  categoryColors[event.category]?.accent || "border-l-gray-500"
+                } ${
+                  activeIndex === index ? "ring-2 ring-gold-400" : ""
+                } shadow-sm hover:shadow-md`}
                 onClick={() => setActiveIndex(index)}
                 style={{
                   opacity: isVisible ? 1 : 0,
@@ -185,8 +144,10 @@ const UpcomingEvents = () => {
                   </div>
                   <div className="p-4 flex-1">
                     <div
-                      className={`text-xs font-bold inline-block px-2 py-1 rounded-full mb-2 ${categoryColors[event.category].badge
-                        }`}
+                      className={`text-xs font-bold inline-block px-2 py-1 rounded-full mb-2 ${
+                        categoryColors[event.category]?.badge ||
+                        "bg-gray-100 text-gray-800"
+                      }`}
                     >
                       {event.category.toUpperCase()}
                     </div>
