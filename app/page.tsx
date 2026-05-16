@@ -15,6 +15,8 @@ import { getAllNews } from "@/lib/news-data";
 
 const SHOW_COMING_SOON = false;
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   if (SHOW_COMING_SOON) {
     return <ComingSoon />;

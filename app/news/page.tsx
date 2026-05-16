@@ -5,6 +5,8 @@ import { EventsSection } from "@/components/news/events-section";
 import { getFeaturedNews, getRecentNews } from "@/lib/news-data";
 import { getAllEvents } from "@/lib/events-data";
 
+export const dynamic = 'force-dynamic';
+
 export default async function NewsPage() {
   const [featuredNews, recentNews, events] = await Promise.all([
     getFeaturedNews(),
