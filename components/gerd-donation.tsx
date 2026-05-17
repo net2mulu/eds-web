@@ -28,7 +28,6 @@ const GERDDonation = () => {
 
   const handleCheckout = () => {
     const amount = isCustom ? customAmount : donationAmount;
-    console.log(`Processing ${donationFrequency} donation of $${amount}`);
     // Add checkout logic here
   };
 

@@ -44,12 +44,9 @@ export function NewsCard({ newsItem }: NewsCardProps) {
         </p>
         <div className="flex justify-between items-center mt-auto">
           <span className="text-gray-500 text-sm">{newsItem.date}</span>
-          <a
-            href="#"
-            className="text-navy-blue text-sm font-medium hover:underline"
-          >
+          <span className="text-navy-blue text-sm font-medium">
             Read more
-          </a>
+          </span>
         </div>
       </div>
     </div>

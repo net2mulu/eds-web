@@ -3,8 +3,15 @@ import { getSession } from "@/lib/auth";
 import { getAllEvents, createEvent } from "@/lib/events-data";
 
 export async function GET() {
-  const events = await getAllEvents();
-  return NextResponse.json(events);
+  try {
+    const events = await getAllEvents();
+    return NextResponse.json(events);
+  } catch {
+    return NextResponse.json(
+      { error: "Failed to fetch events" },
+      { status: 500 }
+    );
+  }
 }
 
 export async function POST(request: Request) {

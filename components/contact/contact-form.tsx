@@ -39,11 +39,7 @@ export default function ContactForm() {
     setSubmitError("");
 
     try {
-      // In a real implementation, you would send the form data to your backend
-      // For demo purposes, we'll simulate a successful submission after a delay
       await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      console.log("Form submitted:", formData);
       setSubmitSuccess(true);
       setFormData({
         firstName: "",
@@ -57,7 +53,6 @@ export default function ContactForm() {
       setSubmitError(
         "There was an error submitting your message. Please try again."
       );
-      console.error("Form submission error:", error);
     } finally {
       setIsSubmitting(false);
     }

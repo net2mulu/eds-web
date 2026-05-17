@@ -3,8 +3,15 @@ import { getSession } from "@/lib/auth";
 import { getAllNews, createNews } from "@/lib/news-data";
 
 export async function GET() {
-  const news = await getAllNews();
-  return NextResponse.json(news);
+  try {
+    const news = await getAllNews();
+    return NextResponse.json(news);
+  } catch {
+    return NextResponse.json(
+      { error: "Failed to fetch news" },
+      { status: 500 }
+    );
+  }
 }
 
 export async function POST(request: Request) {

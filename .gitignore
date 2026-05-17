@@ -18,6 +18,9 @@ yarn-error.log*
 dev*.log
 dev.err
 
+# SQL exports
+*.sql
+
 # data files (migrated to PostgreSQL)
 /data
 

@@ -6,12 +6,19 @@ export async function GET(
   _request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = await params;
-  const item = await getNewsById(id);
-  if (!item) {
-    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  try {
+    const { id } = await params;
+    const item = await getNewsById(id);
+    if (!item) {
+      return NextResponse.json({ error: "Not found" }, { status: 404 });
+    }
+    return NextResponse.json(item);
+  } catch {
+    return NextResponse.json(
+      { error: "Failed to fetch news item" },
+      { status: 500 }
+    );
   }
-  return NextResponse.json(item);
 }
 
 export async function PUT(

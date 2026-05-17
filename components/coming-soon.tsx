@@ -12,8 +12,6 @@ export default function ComingSoon() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real implementation, you would send the email to your backend
-    console.log("Email submitted:", email);
     setSubmitted(true);
     setEmail("");
   };
