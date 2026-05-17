@@ -80,7 +80,10 @@ export function FeaturedNews({ newsItems }: FeaturedNewsProps) {
               <span className="text-gray-500">
                 {newsItems[currentIndex].date}
               </span>
-              <span className="text-navy-blue font-medium flex items-center">
+              <a
+                href="#"
+                className="text-navy-blue font-medium flex items-center"
+              >
                 Read More
                 <svg
                   className="w-4 h-4 ml-1"
@@ -96,7 +99,7 @@ export function FeaturedNews({ newsItems }: FeaturedNewsProps) {
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
-              </span>
+              </a>
             </div>
           </div>
         </div>
@@ -113,7 +116,10 @@ export function FeaturedNews({ newsItems }: FeaturedNewsProps) {
             <span className="text-gray-500 text-sm">
               {newsItems[currentIndex].date}
             </span>
-            <span className="text-navy-blue font-medium flex items-center text-sm">
+            <a
+              href="#"
+              className="text-navy-blue font-medium flex items-center text-sm"
+            >
               Read More
               <svg
                 className="w-4 h-4 ml-1"
@@ -129,7 +135,7 @@ export function FeaturedNews({ newsItems }: FeaturedNewsProps) {
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </span>
+            </a>
           </div>
         </div>
 

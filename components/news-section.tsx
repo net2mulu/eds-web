@@ -1,15 +1,57 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import type { NewsItem } from "@/lib/news-data";
 
-interface NewsSectionProps {
-  news: NewsItem[];
+interface NewsItem {
+  id: number;
+  title: string;
+  date: string;
+  image: string;
+  excerpt: string;
+  url: string;
 }
 
-const NewsSection = ({ news }: NewsSectionProps) => {
-  if (news.length === 0) return null;
+const newsItems: NewsItem[] = [
+  {
+    id: 1,
+    title: "Ethiopian Diaspora Service Launches New Website",
+    date: "Nov 14, 2024",
+    image: "/Home/sectionNine/fitsumarega.webp?height=120&width=200",
+    excerpt:
+      "The platform brings together resources and tools to help the Ethiopian diaspora connect with their homeland.",
+    url: "#",
+  },
+  {
+    id: 2,
+    title:
+      "GreenTech Ethiopia Secures $15 Million Investment to Expand Renewable Energy Projects",
+    date: "Nov 18, 2024",
+    image: "/green.jpg",
+    excerpt:
+      "GreenTech Ethiopia receives major funding to scale up solar and wind energy initiatives across rural regions.",
+    url: "#",
+  },
+  {
+    id: 3,
+    title: "Members of Ethiopian Diaspora Community Now Serve on Boards",
+    date: "Sep 8, 2024",
+    image: "/Home/sectionNine/celebration.webp?height=120&width=200",
+    excerpt:
+      "In a momentous development, Ethiopian professionals from the diaspora have been appointed to key positions.",
+    url: "#",
+  },
+  {
+    id: 4,
+    title:
+      "EDS Literary Digital Archive Preserves Ethiopian Heritage for Future Generations",
+    date: "Aug 5, 2024",
+    image: "/Home/sectionNine/NBE.webp?height=120&width=200",
+    excerpt:
+      "A new online platform preserves and showcases Ethiopian literary works and cultural artifacts.",
+    url: "#",
+  },
+];
 
+const NewsSection = () => {
   return (
     <section className="w-full py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
@@ -27,7 +69,7 @@ const NewsSection = ({ news }: NewsSectionProps) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {news.slice(0, 4).map((item) => (
+          {newsItems.map((item) => (
             <div
               key={item.id}
               className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
@@ -46,17 +88,15 @@ const NewsSection = ({ news }: NewsSectionProps) => {
                 </h3>
                 <p className="text-sm text-gray-300 mb-3">{item.date}</p>
                 <p className="text-sm text-gray-200 mb-4 line-clamp-3 min-h-[4.5rem]">
-                  {item.description}
+                  {item.excerpt}
                 </p>
-                <Link href="/news">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="w-full border-white hover:bg-white text-navy-900"
-                  >
-                    Read More
-                  </Button>
-                </Link>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full border-white hover:bg-white text-navy-900"
+                >
+                  Read More
+                </Button>
               </div>
             </div>
           ))}

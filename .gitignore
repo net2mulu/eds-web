@@ -18,18 +18,14 @@ yarn-error.log*
 dev*.log
 dev.err
 
-# SQL exports
-*.sql
-
-# pnpm lockfile (using npm)
-pnpm-lock.yaml
-
-# data files (migrated to PostgreSQL)
-/data
-
 # env files
 .env*
 !.env.example
+
+# SQL exports
+*.sql
+
+
 
 # vercel
 .vercel

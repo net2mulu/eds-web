@@ -15,9 +15,6 @@ export default function Navigation() {
   const isMobile = useMobile();
   const pathname = usePathname();
   const isHomePage = pathname === "/";
-  const isAdmin = pathname.startsWith("/admin");
-
-  if (isAdmin) return null;
 
   useEffect(() => {
     const handleScroll = () => {

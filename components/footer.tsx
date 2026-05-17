@@ -1,6 +1,3 @@
-"use client";
-
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -14,10 +11,7 @@ import {
 } from "lucide-react";
 
 const Footer = () => {
-  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
-
-  if (pathname.startsWith("/admin")) return null;
 
   return (
     <footer className="relative bg-navy-900 text-white pt-16 pb-8 overflow-hidden">
