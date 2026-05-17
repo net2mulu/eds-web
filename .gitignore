@@ -21,6 +21,9 @@ dev.err
 # SQL exports
 *.sql
 
+# pnpm lockfile (using npm)
+pnpm-lock.yaml
+
 # data files (migrated to PostgreSQL)
 /data
 
