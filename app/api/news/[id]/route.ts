@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { ObjectId } from "mongodb";
 import { getCollection } from "@/lib/mongodb";
 import { getAuthFromRequest } from "@/lib/auth";
+import { newsSchema } from "@/lib/schemas";
+import { z } from "zod";
 
 export async function GET(
   _request: NextRequest,
@@ -35,18 +37,13 @@ export async function PUT(
 
   const { id } = await params;
   try {
-    const body = await request.json();
+    const body = newsSchema.parse(await request.json());
     const collection = await getCollection("newsArticles");
     const result = await collection.updateOne(
       { _id: new ObjectId(id) },
       {
         $set: {
-          title: body.title,
-          description: body.description,
-          content: body.content,
-          image: body.image,
-          category: body.category,
-          featured: body.featured,
+          ...body,
           date: body.date ? new Date(body.date) : undefined,
           updatedAt: new Date(),
         },
@@ -57,6 +54,12 @@ export async function PUT(
     }
     return NextResponse.json({ success: true });
   } catch (error) {
+    if (error instanceof z.ZodError) {
+      return NextResponse.json(
+        { error: "Validation failed", details: error.errors },
+        { status: 400 }
+      );
+    }
     return NextResponse.json(
       { error: "Failed to update news" },
       { status: 500 }

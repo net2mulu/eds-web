@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getCollection } from "@/lib/mongodb";
 import { getAuthFromRequest } from "@/lib/auth";
+import { eventSchema } from "@/lib/schemas";
+import { z } from "zod";
 
 export async function GET() {
   try {
@@ -30,16 +32,10 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const body = await request.json();
+    const body = eventSchema.parse(await request.json());
     const collection = await getCollection("events");
     const result = await collection.insertOne({
-      title: body.title,
-      description: body.description,
-      content: body.content || "",
-      image: body.image,
-      location: body.location || "",
-      category: body.category,
-      featured: body.featured || false,
+      ...body,
       date: body.date ? new Date(body.date) : new Date(),
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -49,6 +45,12 @@ export async function POST(request: NextRequest) {
       { status: 201 }
     );
   } catch (error) {
+    if (error instanceof z.ZodError) {
+      return NextResponse.json(
+        { error: "Validation failed", details: error.errors },
+        { status: 400 }
+      );
+    }
     return NextResponse.json(
       { error: "Failed to create event" },
       { status: 500 }

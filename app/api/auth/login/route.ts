@@ -1,8 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getCollection } from "@/lib/mongodb";
 import { comparePassword, signToken } from "@/lib/auth";
+import { checkRateLimit } from "@/lib/security";
 
 export async function POST(request: NextRequest) {
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+  if (!checkRateLimit(`login:${ip}`)) {
+    return NextResponse.json(
+      { error: "Too many attempts. Try again later." },
+      { status: 429 }
+    );
+  }
+
   try {
     const { email, password } = await request.json();
 
@@ -56,7 +65,7 @@ export async function POST(request: NextRequest) {
     response.cookies.set("admin_token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
+      sameSite: "strict",
       maxAge: 60 * 60 * 24 * 7,
       path: "/",
     });

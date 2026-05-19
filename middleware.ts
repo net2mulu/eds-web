@@ -35,7 +35,10 @@ export async function middleware(request: NextRequest) {
     );
   }
 
-  const token = request.cookies.get("admin_token")?.value;
+  const authHeader = request.headers.get("authorization");
+  const cookieToken = request.cookies.get("admin_token")?.value;
+  const token =
+    authHeader?.startsWith("Bearer ") ? authHeader.slice(7) : cookieToken;
 
   if (!token) {
     return NextResponse.redirect(new URL("/admin/login", request.url));
@@ -43,7 +46,9 @@ export async function middleware(request: NextRequest) {
 
   const valid = await verifyToken(token);
   if (!valid) {
-    return NextResponse.redirect(new URL("/admin/login", request.url));
+    const dest = new URL("/admin/login", request.url);
+    dest.searchParams.set("expired", "1");
+    return NextResponse.redirect(dest);
   }
 
   return NextResponse.next();
