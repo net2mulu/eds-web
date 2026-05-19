@@ -4,9 +4,9 @@ import { jwtVerify } from "jose";
 
 const publicAdminPaths = ["/admin/login"];
 
-const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || "fallback-secret"
-);
+const JWT_SECRET = process.env.JWT_SECRET
+  ? new TextEncoder().encode(process.env.JWT_SECRET)
+  : null;
 
 async function verifyToken(token: string): Promise<boolean> {
   try {
@@ -26,6 +26,13 @@ export async function middleware(request: NextRequest) {
 
   if (publicAdminPaths.includes(pathname)) {
     return NextResponse.next();
+  }
+
+  if (!JWT_SECRET) {
+    return NextResponse.json(
+      { error: "Server misconfigured: JWT_SECRET not set" },
+      { status: 500 }
+    );
   }
 
   const token = request.cookies.get("admin_token")?.value;

@@ -41,6 +41,13 @@ export async function POST(request: NextRequest) {
       email: admin.email,
     });
 
+    if (!token) {
+      return NextResponse.json(
+        { error: "Server misconfigured" },
+        { status: 500 }
+      );
+    }
+
     const response = NextResponse.json({
       token,
       admin: { id: admin._id.toString(), email: admin.email },
