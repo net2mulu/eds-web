@@ -2,9 +2,6 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/navigation";
-import Footer from "@/components/footer";
-import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,10 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} relative`}>
-        {/* Only show navigation and footer for the normal site */}
-        {!SHOW_COMING_SOON && <Navigation />}
-        <main>{children}</main>
-        {!SHOW_COMING_SOON && <Footer />}
+        {children}
       </body>
     </html>
   );
