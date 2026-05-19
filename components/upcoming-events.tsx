@@ -7,22 +7,21 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
 interface Event {
-  id: number;
+  id: string;
   title: string;
   description: string;
   date: string;
   time: string;
   location: string;
   image: string;
-  category: "webinar" | "conference" | "festival" | "workshop";
+  category: string;
 }
 
-const events: Event[] = [
+const seedEvents: Event[] = [
   {
-    id: 1,
+    id: "seed-e1",
     title: "Cultural Exchange Webinar",
-    description:
-      "Join a panel of Ethiopian cultural experts and community leaders for an insightful discussion on bridging the gap between generations and preserving Ethiopian heritage abroad.",
+    description: "Join a panel of Ethiopian cultural experts and community leaders for an insightful discussion on bridging the gap between generations and preserving Ethiopian heritage abroad.",
     date: "Jan 14, 2025",
     time: "7:00 PM EST",
     location: "Online via Zoom",
@@ -30,11 +29,9 @@ const events: Event[] = [
     category: "webinar",
   },
   {
-    id: 2,
-    title:
-      "Ethiopian Diaspora encouraged to embrace economic reforms for active role in national development",
-    description:
-      "As part of the event, a Bazaar and Exhibition showcasing financial institutions and investment opportunities in Ethiopia will be presented.",
+    id: "seed-e2",
+    title: "Ethiopian Diaspora encouraged to embrace economic reforms for active role in national development",
+    description: "As part of the event, a Bazaar and Exhibition showcasing financial institutions and investment opportunities in Ethiopia will be presented.",
     date: "Jan 22, 2025",
     time: "10:00 AM - 4:00 PM",
     location: "Addis Ababa Exhibition Center",
@@ -42,10 +39,9 @@ const events: Event[] = [
     category: "conference",
   },
   {
-    id: 3,
+    id: "seed-e3",
     title: "Ethiopian Heritage Festival Exchange Webinar",
-    description:
-      "A celebration of Ethiopian music, art, food, and culture. Experience Ethiopia like never before through an immersive virtual event.",
+    description: "A celebration of Ethiopian music, art, food, and culture. Experience Ethiopia like never before through an immersive virtual event.",
     date: "Jan 4, 2025",
     time: "2:00 PM EST",
     location: "Online via Zoom",
@@ -54,45 +50,52 @@ const events: Event[] = [
   },
 ];
 
-const categoryColors = {
-  webinar: {
-    badge: "bg-blue-100 text-blue-800",
-    accent: "border-l-blue-500",
-  },
-  conference: {
-    badge: "bg-purple-100 text-purple-800",
-    accent: "border-l-purple-500",
-  },
-  festival: {
-    badge: "bg-amber-100 text-amber-800",
-    accent: "border-l-amber-500",
-  },
-  workshop: {
-    badge: "bg-green-100 text-green-800",
-    accent: "border-l-green-500",
-  },
+const categoryColors: Record<string, { badge: string; accent: string }> = {
+  webinar: { badge: "bg-blue-100 text-blue-800", accent: "border-l-blue-500" },
+  conference: { badge: "bg-purple-100 text-purple-800", accent: "border-l-purple-500" },
+  festival: { badge: "bg-amber-100 text-amber-800", accent: "border-l-amber-500" },
+  workshop: { badge: "bg-green-100 text-green-800", accent: "border-l-green-500" },
 };
 
+function getCategoryStyle(category: string) {
+  const key = category.toLowerCase();
+  return categoryColors[key] || { badge: "bg-gray-100 text-gray-800", accent: "border-l-gray-500" };
+}
+
 const UpcomingEvents = () => {
+  const [events, setEvents] = useState<Event[]>(seedEvents);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/events")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.events?.length > 0) {
+          const dbTitles = new Set(data.events.map((e: any) => e.title.toLowerCase().trim()));
+          const remainingSeed = seedEvents.filter((s) => !dbTitles.has(s.title.toLowerCase().trim()));
+          setEvents([...data.events, ...remainingSeed]);
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 300);
-
     return () => clearTimeout(timer);
   }, []);
 
-  // Auto-rotate events every 6 seconds
   useEffect(() => {
+    if (events.length === 0) return;
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % events.length);
     }, 6000);
-
     return () => clearInterval(interval);
-  }, []);
+  }, [events.length]);
+
+  if (events.length === 0) return null;
 
   return (
     <section className="w-full py-16 bg-gray-50">
@@ -111,7 +114,6 @@ const UpcomingEvents = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-12">
-          {/* Featured event with animation */}
           <div
             className="relative rounded-xl overflow-hidden shadow-lg transform transition-all duration-700 ease-out h-[450px]"
             style={{
@@ -128,8 +130,7 @@ const UpcomingEvents = () => {
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
               <div
-                className={`text-xs font-bold inline-block px-3 py-1 rounded-full mb-3 ${categoryColors[events[activeIndex].category].badge
-                  }`}
+                className={`text-xs font-bold inline-block px-3 py-1 rounded-full mb-3 ${getCategoryStyle(events[activeIndex].category).badge}`}
               >
                 {events[activeIndex].category.toUpperCase()}
               </div>
@@ -159,50 +160,49 @@ const UpcomingEvents = () => {
             </div>
           </div>
 
-          {/* Event cards */}
           <div className="grid grid-cols-1 gap-4">
-            {events.map((event, index) => (
-              <Card
-                key={event.id}
-                className={`p-0 overflow-hidden cursor-pointer transition-all duration-300 border-l-4 ${categoryColors[event.category].accent
-                  } ${activeIndex === index ? "ring-2 ring-gold-400" : ""
-                  } shadow-sm hover:shadow-md`}
-                onClick={() => setActiveIndex(index)}
-                style={{
-                  opacity: isVisible ? 1 : 0,
-                  transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                  transitionDelay: `${index * 100}ms`,
-                }}
-              >
-                <div className="flex flex-col md:flex-row h-full">
-                  <div className="relative w-full md:w-32 h-32">
-                    <Image
-                      src={event.image || "/placeholder.svg"}
-                      alt={event.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-4 flex-1">
-                    <div
-                      className={`text-xs font-bold inline-block px-2 py-1 rounded-full mb-2 ${categoryColors[event.category].badge
-                        }`}
-                    >
-                      {event.category.toUpperCase()}
+            {events.map((event, index) => {
+              const style = getCategoryStyle(event.category);
+              return (
+                <Card
+                  key={event.id}
+                  className={`p-0 overflow-hidden cursor-pointer transition-all duration-300 border-l-4 ${style.accent} ${activeIndex === index ? "ring-2 ring-gold-400" : ""} shadow-sm hover:shadow-md`}
+                  onClick={() => setActiveIndex(index)}
+                  style={{
+                    opacity: isVisible ? 1 : 0,
+                    transform: isVisible ? "translateY(0)" : "translateY(20px)",
+                    transitionDelay: `${index * 100}ms`,
+                  }}
+                >
+                  <div className="flex flex-col md:flex-row h-full">
+                    <div className="relative w-full md:w-32 h-32">
+                      <Image
+                        src={event.image || "/placeholder.svg"}
+                        alt={event.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                    <h3 className="font-semibold text-navy-900 mb-1 line-clamp-2">
-                      {event.title}
-                    </h3>
-                    <div className="flex items-center text-sm text-gray-600 mb-1">
-                      <CalendarDays size={14} className="mr-1" />
-                      <span className="mr-2">{event.date}</span>
-                      <Clock size={14} className="mr-1" />
-                      <span>{event.time}</span>
+                    <div className="p-4 flex-1">
+                      <div
+                        className={`text-xs font-bold inline-block px-2 py-1 rounded-full mb-2 ${style.badge}`}
+                      >
+                        {event.category.toUpperCase()}
+                      </div>
+                      <h3 className="font-semibold text-navy-900 mb-1 line-clamp-2">
+                        {event.title}
+                      </h3>
+                      <div className="flex items-center text-sm text-gray-600 mb-1">
+                        <CalendarDays size={14} className="mr-1" />
+                        <span className="mr-2">{event.date}</span>
+                        <Clock size={14} className="mr-1" />
+                        <span>{event.time}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              );
+            })}
 
             <Button
               variant="outline"

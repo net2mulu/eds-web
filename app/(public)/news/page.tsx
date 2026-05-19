@@ -3,9 +3,11 @@ import { FeaturedNews } from "@/components/news/featured-news";
 import { RecentNews } from "@/components/news/recent-news";
 import { getFeaturedNews, getRecentNews } from "@/lib/news-data";
 
-export default function NewsPage() {
-  const featuredNews = getFeaturedNews();
-  const recentNews = getRecentNews();
+export default async function NewsPage() {
+  const [featuredNews, recentNews] = await Promise.all([
+    getFeaturedNews(),
+    getRecentNews(),
+  ]);
 
   return (
     <main className="min-h-screen bg-gray-50">

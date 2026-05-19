@@ -10,17 +10,20 @@ import GERDDonation from "@/components/gerd-donation";
 import UpcomingEvents from "@/components/upcoming-events";
 import NewsSection from "@/components/news-section";
 import HeroCarousel from "@/components/hero-carousel";
+import { getAllNews } from "@/lib/news-data";
 
 // Hard-coded flag to control whether to show the coming soon page
 // Set to true to show coming soon page, false to show the normal site
 const SHOW_COMING_SOON = false;
 
-export default function Home() {
+export default async function Home() {
   // If SHOW_COMING_SOON is true, render the coming soon page
   // Otherwise, render the normal site
   if (SHOW_COMING_SOON) {
     return <ComingSoon />;
   }
+
+  const newsItems = await getAllNews();
 
   // Normal site content
   return (
@@ -35,7 +38,7 @@ export default function Home() {
       <JoinMovement />
       <Testimonials />
       <UpcomingEvents />
-      <NewsSection />
+      <NewsSection newsItems={newsItems} />
     </div>
   );
 }
