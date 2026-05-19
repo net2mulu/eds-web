@@ -3,6 +3,8 @@ import { FeaturedNews } from "@/components/news/featured-news";
 import { RecentNews } from "@/components/news/recent-news";
 import { getFeaturedNews, getRecentNews } from "@/lib/news-data";
 
+export const dynamic = "force-dynamic";
+
 export default async function NewsPage() {
   const [featuredNews, recentNews] = await Promise.all([
     getFeaturedNews(),
