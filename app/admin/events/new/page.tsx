@@ -12,6 +12,7 @@ const categories = [
   "Cultural",
   "Fundraiser",
   "Seminar",
+  "Webinar",
   "Other",
 ];
 
@@ -22,6 +23,8 @@ export default function NewEventPage() {
     description: "",
     content: "",
     location: "",
+    startTime: "",
+    endTime: "",
     category: "Conference",
     featured: false,
     date: new Date().toISOString().split("T")[0],
@@ -66,7 +69,15 @@ export default function NewEventPage() {
       const res = await fetch("/api/events", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, image }),
+        body: JSON.stringify({
+          ...form,
+          image,
+          time: form.startTime && form.endTime
+            ? `${form.startTime} - ${form.endTime}`
+            : form.startTime || form.endTime || "",
+          startTime: undefined,
+          endTime: undefined,
+        }),
       });
 
       if (res.ok) {
@@ -173,15 +184,39 @@ export default function NewEventPage() {
               </select>
             </div>
 
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Date
+            </label>
+            <input
+              type="date"
+              value={form.date}
+              onChange={(e) => setForm({ ...form, date: e.target.value })}
+              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-gold-400 outline-none"
+            />
+          </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Date
+                Start Time
               </label>
               <input
-                type="date"
-                value={form.date}
-                onChange={(e) => setForm({ ...form, date: e.target.value })}
+                type="text"
+                value={form.startTime}
+                onChange={(e) => setForm({ ...form, startTime: e.target.value })}
                 className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-gold-400 outline-none"
+                placeholder="e.g. 10:00 AM"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                End Time
+              </label>
+              <input
+                type="text"
+                value={form.endTime}
+                onChange={(e) => setForm({ ...form, endTime: e.target.value })}
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-gold-400 outline-none"
+                placeholder="e.g. 4:00 PM"
               />
             </div>
           </div>

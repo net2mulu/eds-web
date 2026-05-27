@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 interface NewsItem {
@@ -53,13 +54,15 @@ const NewsSection = ({ newsItems }: NewsSectionProps) => {
                 <p className="text-sm text-gray-200 mb-4 line-clamp-3 min-h-[4.5rem]">
                   {item.description}
                 </p>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="w-full border-white hover:bg-white text-navy-900"
-                >
-                  Read More
-                </Button>
+                <Link href={`/news/${item.id}`}>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full border-white hover:bg-white text-navy-900"
+                  >
+                    Read More
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}

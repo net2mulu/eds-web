@@ -16,6 +16,7 @@ export const eventSchema = z.object({
   content: z.string().max(10000).optional().default(""),
   image: z.string().url("Image must be a valid URL").min(1, "Image is required"),
   location: z.string().max(200).optional().default(""),
+  time: z.string().max(100).optional().default(""),
   category: z.string().min(1, "Category is required").max(100),
   featured: z.boolean().optional().default(false),
   date: z.string().optional(),

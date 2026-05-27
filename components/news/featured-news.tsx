@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import type { NewsItem } from "@/lib/news-data";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -80,8 +81,8 @@ export function FeaturedNews({ newsItems }: FeaturedNewsProps) {
               <span className="text-gray-500">
                 {newsItems[currentIndex].date}
               </span>
-              <a
-                href="#"
+              <Link
+                href={`/news/${newsItems[currentIndex].id}`}
                 className="text-navy-blue font-medium flex items-center"
               >
                 Read More
@@ -99,7 +100,7 @@ export function FeaturedNews({ newsItems }: FeaturedNewsProps) {
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -116,8 +117,8 @@ export function FeaturedNews({ newsItems }: FeaturedNewsProps) {
             <span className="text-gray-500 text-sm">
               {newsItems[currentIndex].date}
             </span>
-            <a
-              href="#"
+            <Link
+              href={`/news/${newsItems[currentIndex].id}`}
               className="text-navy-blue font-medium flex items-center text-sm"
             >
               Read More
@@ -135,7 +136,7 @@ export function FeaturedNews({ newsItems }: FeaturedNewsProps) {
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
 
