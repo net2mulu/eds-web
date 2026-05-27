@@ -232,7 +232,7 @@ export default function JoinMovement() {
             {/* CTA Button */}
             <div className="mt-12 text-center">
               <Link
-                href="/join"
+                href="/services/explore?service=membership"
                 className="inline-flex items-center bg-gold-400 hover:bg-gold-500 text-navy-900 px-8 py-3 rounded-md transition-all duration-300 font-medium group"
               >
                 Join the Network

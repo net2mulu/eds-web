@@ -104,7 +104,7 @@ export default function ProgramsInitiatives() {
             asChild
             className="bg-navy-900 hover:bg-navy-800 text-white px-8 py-6 text-lg rounded-md"
           >
-            <Link href="/events">See More in Events</Link>
+            <Link href="/news">See More in Events</Link>
           </Button>
         </div>
       </div>

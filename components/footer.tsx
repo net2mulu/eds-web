@@ -77,7 +77,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="#"
+                  href="/about"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   About Us
@@ -85,7 +85,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/services"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Programs & Initiatives
@@ -93,7 +93,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/news"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Events
@@ -101,7 +101,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/news"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   News & Updates
@@ -109,7 +109,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/resources"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Resources
@@ -117,7 +117,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/contact"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Contact Us

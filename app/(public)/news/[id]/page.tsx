@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, CalendarDays } from "lucide-react";
+import { ArrowLeft, CalendarDays, Tag } from "lucide-react";
 import { getNewsById } from "@/lib/news-data";
 
 export const dynamic = "force-dynamic";
@@ -19,49 +19,61 @@ export default async function NewsDetailPage({
   }
 
   return (
-    <main className="min-h-screen bg-gray-50">
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <Link
-          href="/news"
-          className="inline-flex items-center text-navy-blue hover:underline mb-8"
-        >
-          <ArrowLeft size={20} className="mr-2" />
-          Back to News
-        </Link>
-
-        <div className="bg-white rounded-xl shadow-md overflow-hidden">
-          <div className="relative h-[300px] md:h-[450px]">
-            <Image
-              src={news.image || "/placeholder.svg"}
-              alt={news.title}
-              fill
-              className="object-cover"
-              priority
-            />
+    <main className="min-h-screen bg-white">
+      <div className="relative h-[50vh] min-h-[300px] md:min-h-[420px] bg-navy-900">
+        <Image
+          src={news.image || "/placeholder.svg"}
+          alt={news.title}
+          fill
+          className="object-cover opacity-60"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 max-w-4xl mx-auto">
+          <Link
+            href="/news"
+            className="inline-flex items-center text-white/80 hover:text-white mb-4 md:mb-6 transition-colors text-sm"
+          >
+            <ArrowLeft size={16} className="mr-1.5" />
+            Back to News
+          </Link>
+          <div className="flex flex-wrap items-center gap-3 mb-3">
+            <span className="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1 rounded-full bg-white/20 text-white backdrop-blur-sm">
+              <Tag size={12} />
+              {news.category}
+            </span>
+            <span className="inline-flex items-center gap-1 text-xs text-white/70">
+              <CalendarDays size={12} />
+              {news.date}
+            </span>
           </div>
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            {news.title}
+          </h1>
+        </div>
+      </div>
 
-          <div className="p-6 md:p-10">
-            <div className="flex items-center gap-4 mb-4">
-              <span className="text-xs font-semibold px-3 py-1 rounded-full bg-blue-100 text-blue-800">
-                {news.category}
-              </span>
-              <span className="flex items-center text-gray-500 text-sm">
-                <CalendarDays size={16} className="mr-1" />
-                {news.date}
-              </span>
-            </div>
+      <article className="max-w-3xl mx-auto px-6 py-10 md:py-16">
+        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-10 border-l-4 border-navy-900 pl-5">
+          {news.description}
+        </p>
 
-            <h1 className="text-3xl md:text-4xl font-bold text-navy-blue mb-6">
-              {news.title}
-            </h1>
-
-            <div className="prose prose-lg max-w-none text-gray-700">
-              <p className="text-lg text-gray-600 mb-6">{news.description}</p>
-              {news.content && (
-                <div className="whitespace-pre-wrap">{news.content}</div>
-              )}
-            </div>
+        {news.content && (
+          <div className="text-gray-700 leading-relaxed space-y-5 text-base md:text-lg">
+            {news.content.split("\n").map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
           </div>
+        )}
+
+        <div className="mt-12 pt-8 border-t border-gray-200">
+          <Link
+            href="/news"
+            className="inline-flex items-center gap-2 text-navy-900 font-medium hover:underline"
+          >
+            <ArrowLeft size={16} />
+            Back to all news
+          </Link>
         </div>
       </article>
     </main>

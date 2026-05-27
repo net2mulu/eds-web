@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -27,7 +28,7 @@ export default function DonationPage() {
             size="lg"
             asChild
           >
-            <a href="#donate">Donate Now</a>
+            <Link href="https://fastpayet.com/donation/view/JeyK6PndcBl1V6XwafVr" target="_blank" rel="noopener noreferrer">Donate Now</Link>
           </Button>
         </div>
       </section>
@@ -184,12 +185,12 @@ export default function DonationPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <CardDescription className="text-gray-700 text-base min-h-[80px]">
-                Mekedonia provides shelter, food, and care to Ethiopia’s vulnerable, empowering them through vocational training and compassionate support. Your help brings hope and renewed lives.
+                Mekedonia provides shelter, food, and care to Ethiopia's vulnerable, empowering them through vocational training and compassionate support. Your help brings hope and renewed lives.
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-[#0a1e56] hover:bg-[#0a1e56]/90">
-                  Donate
+                <Button className="w-full bg-[#0a1e56] hover:bg-[#0a1e56]/90" asChild>
+                  <Link href="https://fastpayet.com/donation/view/JeyK6PndcBl1V6XwafVr" target="_blank" rel="noopener noreferrer">Donate</Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -204,12 +205,12 @@ export default function DonationPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <CardDescription className="text-gray-700 text-base min-h-[80px]">
-                 Provide shelter, care, and hope to people with mental health challenges who’ve been forgotten—offering rehabilitative services and community reintegration in a stigma-free setting.
+                 Provide shelter, care, and hope to people with mental health challenges who've been forgotten—offering rehabilitative services and community reintegration in a stigma-free setting.
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-[#0a1e56] hover:bg-[#0a1e56]/90">
-                  Donate
+                <Button className="w-full bg-[#0a1e56] hover:bg-[#0a1e56]/90" asChild>
+                  <Link href="https://fastpayet.com/donation/view/JeyK6PndcBl1V6XwafVr" target="_blank" rel="noopener noreferrer">Donate</Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -224,12 +225,12 @@ export default function DonationPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <CardDescription className="text-gray-700 text-base min-h-[80px]">
-                 Nia Foundation empowers children with autism through education and therapy, promoting inclusion and community awareness. Support helps build a more inclusive Ethiopia.
+                  Nia Foundation empowers children with autism through education and therapy, promoting inclusion and community awareness. Support helps build a more inclusive Ethiopia.
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-[#0a1e56] hover:bg-[#0a1e56]/90">
-                  Donate
+                <Button className="w-full bg-[#0a1e56] hover:bg-[#0a1e56]/90" asChild>
+                  <Link href="https://fastpayet.com/donation/view/JeyK6PndcBl1V6XwafVr" target="_blank" rel="noopener noreferrer">Donate</Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -248,8 +249,8 @@ export default function DonationPage() {
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-[#0a1e56] hover:bg-[#0a1e56]/90">
-                  Donate
+                <Button className="w-full bg-[#0a1e56] hover:bg-[#0a1e56]/90" asChild>
+                  <Link href="https://fastpayet.com/donation/view/JeyK6PndcBl1V6XwafVr" target="_blank" rel="noopener noreferrer">Donate</Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -267,8 +268,9 @@ export default function DonationPage() {
           <Button
             className="bg-[#f0ad4e] hover:bg-[#eea236] text-[#0a1e56] font-bold text-lg px-8 py-6"
             size="lg"
+            asChild
           >
-            Donate Now
+            <Link href="https://fastpayet.com/donation/view/JeyK6PndcBl1V6XwafVr" target="_blank" rel="noopener noreferrer">Donate Now</Link>
           </Button>
         </div>
       </section>

@@ -84,7 +84,7 @@ export default function JoinBanner() {
               animate={controls}
             >
               <Link
-                href="/membership"
+                href="/services/explore?service=membership"
                 className="inline-block bg-white hover:bg-gray-100 text-navy-900 font-bold py-3 px-8 rounded-md transition-colors duration-300 text-lg"
               >
                 Become a Member
@@ -98,7 +98,7 @@ export default function JoinBanner() {
               animate={controls}
             >
               <Link
-                href="/volunteer"
+                href="/services/explore?service=volunteer"
                 className="inline-block bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-md transition-colors duration-300 text-lg"
               >
                 Volunteer

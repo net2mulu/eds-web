@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { CalendarDays, MapPin, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -188,12 +189,14 @@ const UpcomingEvents = () => {
               );
             })}
 
-            <Button
-              variant="outline"
-              className="mt-2 w-full border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white"
-            >
-              View All Events
-            </Button>
+            <Link href="/news">
+              <Button
+                variant="outline"
+                className="mt-2 w-full border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white"
+              >
+                View All Events
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

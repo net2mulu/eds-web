@@ -142,7 +142,7 @@ export default function NotFound() {
             <Link href="/services" className="hover:text-navy-900">
               Services
             </Link>
-            <Link href="/news-events" className="hover:text-navy-900">
+            <Link href="/news" className="hover:text-navy-900">
               News & Events
             </Link>
             <Link href="/resources" className="hover:text-navy-900">

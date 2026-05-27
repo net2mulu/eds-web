@@ -31,7 +31,7 @@ export default function CommunityHighlights() {
       imageUrl:
         "/Home/sectionFive/mothers.webp",
       imageAlt: "Women sorting coffee beans",
-      link: "/insights/youth-women",
+      link: "/news",
     },
     {
       id: "diaspora-associations",
@@ -42,7 +42,7 @@ export default function CommunityHighlights() {
       imageUrl:
         "/Home/sectionFive/population.webp",
       imageAlt: "Ethiopian Diaspora Association logo",
-      link: "/insights/diaspora-associations",
+      link: "/news",
     },
     {
       id: "social-impact",
@@ -52,7 +52,7 @@ export default function CommunityHighlights() {
       imageUrl:
         "/Home/sectionFive/abay.webp",
       imageAlt: "Dam project in Ethiopia",
-      link: "/insights/social-impact",
+      link: "/news",
     },
   ];
 
@@ -160,7 +160,7 @@ export default function CommunityHighlights() {
         {/* See More button */}
         <div className="flex justify-center mt-12">
           <Link
-            href="/insights"
+            href="/news"
             className="bg-navy-900 hover:bg-navy-800 text-white px-8 py-3 rounded-md transition-all duration-300 flex items-center group"
           >
             See More In Insights
